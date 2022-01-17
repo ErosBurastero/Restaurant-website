@@ -1,6 +1,6 @@
 <template>
  <div>
-  CULO
+  CULO pedo
  </div>
   
 </template>
