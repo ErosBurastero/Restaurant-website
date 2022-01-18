@@ -1,18 +1,14 @@
 <template>
-
- <div>
-  CULO pedo
- </div>
-
- 
+ <div></div>
 </template>
 
 <script>
-
-
 export default {
-    name: "Hamburguesas"
+    mounted () {
+    console.log(this)
+  }
 }
+  
 </script>
 
 <style>

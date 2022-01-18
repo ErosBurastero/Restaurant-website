@@ -8,7 +8,6 @@
       <NavegationMenu />
     </v-app-bar>
 
-    
 
     <v-main>
       <router-view />
