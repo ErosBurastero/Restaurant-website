@@ -4,6 +4,7 @@
       <option value="A">Product A</option>
       <option value="B">Product B</option>
       <option value="C">Product C</option>
+      <option value="D">Hola leila tas re loca</option>
     </select>
  </div>
   

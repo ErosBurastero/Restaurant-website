@@ -1,23 +1,29 @@
 <template>
 
-<div>
-  <v-img :class="{'v-flex justify-center':vuetify.breakpoint.width=500}"
-     src="fotoPrincipal.jpeg">
-
-    </v-img>
-
-    <div>
-
-    </div>
-</div>
+<div @[event].s="showAlert">pedo</div>
     
 </template>
 
 <script>
 export default {
+
+    data () {
+
+      return {
+        event: "click"
+      }
+    },
+
+    methods: {
+        showAlert() {
+          alert("me tocaste")
+        }
+
+    }
+}
+
   
 
-}
 
 </script>
 

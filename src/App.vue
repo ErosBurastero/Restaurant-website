@@ -6,6 +6,9 @@
       dark
     >
       <NavegationMenu />
+  
+
+  
     </v-app-bar>
 
 
@@ -13,11 +16,14 @@
       <router-view />
     </v-main>
   </v-app>
+
+  
 </template>
 
 <script>
 
 import NavegationMenu from './components/modules/NavegationMenu.vue';
+
 
 export default {
   name: 'App',
@@ -25,6 +31,7 @@ export default {
   components: {
   
     NavegationMenu ,
+    
   },
 
   data: () => ({
