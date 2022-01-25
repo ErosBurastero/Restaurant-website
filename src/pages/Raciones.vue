@@ -1,0 +1,177 @@
+<template>
+  <div>
+      <div class="text-center my-5">
+    <v-btn  href="/Comidas" rounded  color="orange accent-3 black--text"  dark >COMIDAS</v-btn>
+    <v-btn  href="/Raciones" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >RACIONES</v-btn>
+
+  </div>
+
+  <div class="px-5 black">
+      <v-card  max-width="850"
+      class="orange accent-3 my-4 pa-4 rounded-br-xl" 
+      :class="{'d-flex': $vuetify.breakpoint.smAndUp}"
+      elevation="4"
+      v-for="(racion, index) in raciones"
+      :key="index"
+      >
+
+    <div>
+     <div class="font-weight-black display-1" > {{ racion.nombre }} </div>
+     <div> {{ racion.ingredientes }} </div>
+
+         <div class="font-weight-medium"> {{ racion.precio }}</div>
+          <div class="font-weight-medium"> {{ racion.cantidad }}</div>
+
+        <v-btn
+          class="rounded-circle"
+          color="black"
+          dark
+          @click="incrementQuantity(racion)"
+          >+</v-btn
+        >
+        <v-btn
+          class="rounded-circle"
+          color="black"
+          dark
+          @click="decreaseQuantity(racion)"
+          >-</v-btn
+        >
+
+         <v-btn class="ml-1 my-2" rounded color="black" dark
+          >Agregar al carrito
+          </v-btn
+        >
+
+        <div> {{ "PRECIO POR UNIDAD:" + racion.valor}} </div>   
+      
+    </div>
+
+      </v-card>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  </div>
+</template>
+
+<script>
+export default {
+    data () {
+        return {
+            raciones: [
+                {
+                    nombre: "AMERICAN GANGSTER",
+                    ingredientes: "PAPAS FRITAS, SALSA CHEDDAR DE LA CASA Y PANCETA",
+                    precio: "0$",
+                    valor: 550,
+                    cantidad: 0,
+                    url: "",
+                },
+
+                {
+                    nombre: "PAPAS 4 MAFIAS",
+                    ingredientes: "PAPAS FRITAS, BONDIOLA BRASEADA BA;ADAS EN SALSA CHEDDAR",
+                    precio: "0$",
+                    valor: 650,
+                    cantidad: 0,
+                    url: "",
+                },
+
+                {
+                    nombre: "PAPAS GANGSTER",
+                    ingredientes: "PAPAS FRITAS, CHESSEBURGER, CEBOLLA CARAMELIZADA Y QUESO CREMA DE CIBOULETTE",
+                    precio: "0$",
+                    valor: 700,
+                    cantidad: 0,
+                    url: "",
+                },
+
+                {
+                    nombre: "PAPAS FRITAS",
+                    precio: "0$",
+                    valor: 500,
+                    cantidad: 0,
+                    url: "",
+                },
+
+                {
+                    nombre: "BATATAS FRITAS",
+                    ingredientes: "BATATAS FRITAS CON DIPS DE MOSTAZA DULCE",
+                    precio: "0$",
+                    valor: 500,
+                    cantidad: 0,
+                    url: "",
+                },
+
+                {
+                    nombre: "NACHOS",
+                    ingredientes: "NACHOS ADEREZADOS CON SALSA CHEDDAR DE LA CASA O GUACAMOLE CASERO",
+                    precio: "0$",
+                    valor: 530,
+                    cantidad: 0,
+                    url: "",
+                },
+
+                {
+                    nombre: "AROS DE CEBOLLA",
+                    ingredientes: "AROS DE CEBOLLA REBOZADOS CON DIPS DE BARBACOA",
+                    precio: "0$",
+                    valor: 500,
+                    cantidad: 0,
+                    url: "",
+                },
+
+                {
+                    nombre: "POLLO CRISPY",
+                    ingredientes: "TROZOS DE PECHUGA DE POLLO EMPANADOS EN CEREALES CON DIPS DE MOSTAZA DULCE",
+                    precio: "0$",
+                    valor: 650,
+                    cantidad: 0,
+                    url: "",
+                },
+
+                {
+                    nombre: "MUZZA MILA",
+                    ingredientes: "QUESO MOZZARELLA REBOZADO CON DIPS DE SALSA DE TOMATE FRESCA",
+                    precio: "0$",
+                    valor: 600,
+                    cantidad: 0,
+                    url: "",
+                },
+            ]
+        }
+    },
+
+    methods: {
+        incrementQuantity(racion) {
+            const duplicar = parseInt(racion.precio.slice(0, -1))
+            racion.precio = duplicar + racion.valor + "$";
+            racion.cantidad++;
+        },
+
+
+        decreaseQuantity(racion) {
+            if (racion.cantidad === 0) {
+                return
+            }
+            const duplicar = parseInt(racion.precio.slice(0, -1))
+            racion.precio = duplicar - racion.valor + "$";
+
+            racion.cantidad--;
+        }
+    }
+
+        
+}
+</script>
+
+<style>
+
+</style>

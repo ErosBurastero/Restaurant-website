@@ -20,20 +20,26 @@
         <v-icon>mdi-food</v-icon>
       </v-tab>
 
+       <v-tab class="black--text" href="/Comidas">
+        Comidas
+        <v-icon>mdi-food-fork-drink</v-icon>
+      </v-tab>
+
       <v-tab class="black--text" href="/Tragos">
         Tragos
         <v-icon>mdi-glass-cocktail</v-icon>
-      </v-tab>
-
-      <v-tab class="black--text" href="/Delivery">
-        Delivery
-        <v-icon>mdi-moped-outline</v-icon>
       </v-tab>
 
       <v-tab class="black--text" href="/Contacto">
         Contacto
         <v-icon>mdi-account</v-icon>
       </v-tab>
+
+       <v-tab class="black--text" href="/Carrito">
+        Carrito
+        <v-icon>mdi-cart-outline</v-icon>
+      </v-tab>
+
     </v-tabs>
 
   </v-card>

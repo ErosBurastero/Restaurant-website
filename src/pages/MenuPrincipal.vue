@@ -1,34 +1,45 @@
 <template>
 
-<div @[event].s="showAlert">pedo</div>
+  <v-carousel height="700" class="px-5 my-16 fixed" hide-delimiters > 
+    <v-carousel-item  
+      v-for="(item,i) in items"  :key="i" >
+      <v-img :src="item.src" max-height="700" contain></v-img>
+      
+      </v-carousel-item>
     
+  </v-carousel>
+
+
 </template>
 
 <script>
-export default {
-
+  export default {
     data () {
-
       return {
-        event: "click"
+        items: [
+          {
+            src: 'foto3.jpg',
+          },
+          {
+            src: 'fotoPrincipal.jpeg',
+          },
+          {
+            src: 'public.foto3.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          },
+        ],
       }
     },
-
-    methods: {
-        showAlert() {
-          alert("me tocaste")
-        }
-
-    }
-}
-
-  
-
-
+  }
 </script>
 
-<style>
 
+<style scoped>
 
+  .fixed {
+    position: fixed;
+  }
 
 </style>

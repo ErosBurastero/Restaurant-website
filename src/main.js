@@ -31,11 +31,22 @@ const routes = [{
             import ('./pages/MenuPrincipal.vue')
     },
 
-
     {
         path: '/hamburguesas',
         component: () =>
             import ('./pages/Hamburguesas.vue')
+    },
+
+    {
+        path: '/Comidas',
+        component: () =>
+            import ('./pages/Comidas.vue')
+    },
+
+    {
+        path: '/Raciones',
+        component: () =>
+            import ('./pages/Raciones.vue')
     },
 
     {
@@ -44,16 +55,35 @@ const routes = [{
             import ('./pages/Tragos.vue')
     },
 
+
     {
-        path: '/Delivery',
+        path: '/Bebidas',
         component: () =>
-            import ('./pages/Delivery.vue')
+            import ('./pages/Bebidas.vue')
+    },
+
+    {
+        path: '/Cervezas',
+        component: () =>
+            import ('./pages/Cervezas.vue')
+    },
+
+    {
+        path: '/Whiskys',
+        component: () =>
+            import ('./pages/Whiskys.vue')
     },
 
     {
         path: '/Contacto',
         component: () =>
             import ('./pages/Contacto.vue')
+    },
+
+    {
+        path: '/Carrito',
+        component: () =>
+            import ('./pages/Carrito.vue')
     },
 
 ]
