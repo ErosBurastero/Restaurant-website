@@ -6,23 +6,25 @@
       dark
     >
       <NavegationMenu />
-  
-
+     
   
     </v-app-bar>
 
-
+ 
     <v-main>
       <router-view />
     </v-main>
+    
+       <Footer />
   </v-app>
 
-  
+
 </template>
 
 <script>
 
 import NavegationMenu from './components/modules/NavegationMenu.vue';
+import Footer from './components/modules/Footer.vue';
 
 
 export default {
@@ -31,6 +33,9 @@ export default {
   components: {
   
     NavegationMenu ,
+    Footer,
+  
+    
     
   },
 

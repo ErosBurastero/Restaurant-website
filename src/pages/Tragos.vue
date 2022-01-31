@@ -2,7 +2,7 @@
 
  <div>
        <div class="text-center my-5">
-          <v-btn  href="/Tragos" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >TRAGOS</v-btn>
+          <v-btn  href="/Tragos" class="ml-2 my-2"  rounded  color="orange accent-3 black--text"  dark >TRAGOS</v-btn>
           <v-btn  href="/Bebidas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >BEBIDAS SIN ALCOHOL</v-btn>
           <v-btn  href="/Cervezas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >CERVEZAS</v-btn>     
           <v-btn  href="/Whiskys" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >WHISKYS Y ESPUMANTES</v-btn>
@@ -11,7 +11,9 @@
          </div>
   
   <div class="px-5 black ">
-    <v-card max-width="850" class="orange accent-3 my-4 pa-4 " elevation="5" v-for="items in tragos" :key="items">
+    
+      <v-card  max-width="850" class="orange accent-3 my-4 pa-4 rounded-br-xl "  elevation="5" v-for="items in tragos" :key="items">
+
       <div class="font-weight-black display-1"> {{ items.Nombre }} </div>
 
       <div v-for="ingrediente in items.Ingredientes" :key="ingrediente">
@@ -26,7 +28,7 @@
        <v-btn class="ml-1 my-2" rounded color="black"  dark  >Agregar al carrito</v-btn>
        <div> {{ "PRECIO POR UNIDAD: $" + items.valor }} </div>
       </v-card>
-
+   
     
   </div>
     </div>
@@ -44,6 +46,7 @@ export default {
           Precio: "0$",
           valor: 600,
           Cantidad: 0,
+          url: "corona.jpg"
         },
         {
           Nombre: "LUCHESSE'S DRINK",
@@ -270,7 +273,11 @@ export default {
           Cantidad: 0,
         },
       ],
+
+      comida: ''
     };
+
+    
   },
 
   methods: {
@@ -293,7 +300,9 @@ export default {
      
       trago.Cantidad--;
     
-    }
+    },
+
+    
 
     
 

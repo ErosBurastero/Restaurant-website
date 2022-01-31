@@ -10,7 +10,7 @@
       
     >
       <v-tabs-slider></v-tabs-slider>
-        <v-tab class="black--text" href="/MenuPrincipal">
+        <v-tab class="black--text" href="/">
         Inicio
         <v-icon>mdi-home</v-icon>
       </v-tab>
@@ -28,11 +28,6 @@
       <v-tab class="black--text" href="/Tragos">
         Tragos
         <v-icon>mdi-glass-cocktail</v-icon>
-      </v-tab>
-
-      <v-tab class="black--text" href="/Contacto">
-        Contacto
-        <v-icon>mdi-account</v-icon>
       </v-tab>
 
        <v-tab class="black--text" href="/Carrito">
