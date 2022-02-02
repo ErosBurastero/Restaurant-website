@@ -6,8 +6,6 @@
       centered
       dark
       icons-and-text
-      
-      
     >
       <v-tabs-slider></v-tabs-slider>
         <v-tab class="black--text" href="/">

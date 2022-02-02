@@ -1,5 +1,5 @@
 <template>
-<div>
+<div  class="d-flex flex-column align-center px-5 ">
     <div class="text-center my-5">
           <v-btn  href="/Tragos" class="ml-2 my-2"  rounded  color="orange accent-3 black--text"  dark >TRAGOS</v-btn>
           <v-btn  href="/Bebidas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >BEBIDAS SIN ALCOHOL</v-btn>
@@ -9,7 +9,7 @@
 
   </div>
 
-    <div class="px-5 black">
+    <div class="px-5">
       <v-card  max-width="850"
       class="orange accent-3 my-4 pa-4 rounded-br-xl" 
       :class="{'d-flex': $vuetify.breakpoint.smAndUp}"
@@ -41,8 +41,7 @@
           >-</v-btn
         >
 
-         <v-btn class="ml-1 my-2" rounded color="black" dark
-          >Agregar al carrito
+         <v-btn class="ml-1 my-2" rounded color="black" dark @click="addFoodAction(bebida)" >Agregar al carrito
           </v-btn
         >
 
@@ -177,6 +176,10 @@ export default {
             
             bebida.cantidad--;
         },
+
+           addFoodAction(nuevaComida){
+      this.$store.dispatch('addFoodAction', nuevaComida)
+    },
 
  
     }

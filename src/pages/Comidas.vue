@@ -1,5 +1,5 @@
 <template>
-<div>
+<div  class="d-flex flex-column align-center px-5 ">
 
  <div class="text-center my-5">
     <v-btn  href="/Comidas" rounded  color="orange accent-3 black--text"  dark >COMIDAS</v-btn>
@@ -10,7 +10,7 @@
 
   
 
-     <div class="px-5 black">
+     <div class="px-5 ">
         <v-card  max-width="850"
       class="orange accent-3 my-4 pa-4 rounded-br-xl" 
       :class="{'d-flex': $vuetify.breakpoint.smAndUp}"
@@ -46,8 +46,7 @@
           >-</v-btn
         >
 
-        <v-btn class="ml-1 my-2" rounded color="black" dark
-          >Agregar al carrito
+        <v-btn class="ml-1 my-2" rounded color="black" dark @click="addFoodAction(item)" >Agregar al carrito
           </v-btn
         >
 
@@ -206,7 +205,11 @@ export default {
     const precio = parseInt(comida.precio.slice(0, -1))
     comida.precio = precio - comida.valor + "$";
       comida.cantidad--;
-    }
+    },
+
+       addFoodAction(nuevaComida){
+      this.$store.dispatch('addFoodAction', nuevaComida)
+    },
   }
     
 

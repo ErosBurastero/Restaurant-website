@@ -1,6 +1,6 @@
 <template>
-<div>
-  <v-card max-width="850" class="card orange accent-3 my-4 pa-4 rounded-br-xl ">
+<div  class="d-flex flex-column align-center px-5 ">
+  <v-card max-width="850" min-width="386" class="card orange accent-3 my-4 pa-4 rounded-br-xl ">
    <ul class="my-4" v-for="(comida, index) in $store.state.comidas"
       :key="index">
     <li class="font-weight-bold">
@@ -14,6 +14,7 @@
      </li>
      
       </ul>
+      <v-btn class=" my-2" rounded color="black" dark @click="enviarWhatsapp()">ENVIAR PEDIDO</v-btn>
   </v-card>
   </div>
 
@@ -36,19 +37,13 @@ export default {
 
   methods: {  
     deleteFood(comida) {
-      this.$store.state.comidas.splice(this.$store.state.comidas.indexOf(comida), 1);
-
+       const borrar =  this.$store.state.comidas.splice(this.$store.state.comidas.indexOf(comida), 1);
 
        if (borrar != 1) {
         return
       }
       
-      const borrar =  this.$store.state.comidas.splice(this.$store.state.comidas.indexOf(comida), 1);
-
-
-
-       
-      this.$store.dispatch('deleteComidaAction', comida )
+      this.$store.dispatch('deleteComidaAction')
 
     }
 

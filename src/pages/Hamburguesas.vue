@@ -13,16 +13,16 @@
     <v-img class="mr-" :src="item.url" max-height="200" max-width="200" contain></v-img>
 
       <div class="pl-4 ">
-        <div class="font-weight-black display-1">{{ item.Nombre }}</div>
-        <div class="font-weight-medium">{{ item.Caracteristicas }}</div>
+        <div class="font-weight-black display-1">{{ item.nombre }}</div>
+        <div class="font-weight-medium">{{ item.caracteristicas }}</div>
 
-        <div  v-for="(ingrediente, index) in item.Ingredientes" :key="index">
+        <div  v-for="(ingrediente, index) in item.ingredientes" :key="index">
           {{ ingrediente }}
         </div>
 
-        <div class="font-weight-medium">{{ item.Precio }}</div>
+        <div class="font-weight-medium">{{ item.precio }}</div>
 
-        <div class="font-weight-medium">{{ item.Cantidad }}</div>
+        <div class="font-weight-medium">{{ item.cantidad }}</div>
         <v-btn
           class="rounded-circle"
           color="black"
@@ -38,8 +38,7 @@
           >-</v-btn
         >
 
-        <v-btn class="ml-1 my-2" rounded color="black" dark
-          >Agregar al carrito
+        <v-btn class="ml-1 my-2" rounded color="black" dark @click="addFoodAction(item)">Agregar al carrito
           </v-btn
         >
         
@@ -59,131 +58,132 @@ export default {
     return {
       hamburguesas: [
         {
-          Nombre: "CHESSEBURGER GANGS",
-          Caracteristicas: "SIN TACC",
-          Ingredientes: [
+          nombre: "CHESSEBURGER GANGS",
+          caracteristicas: "SIN TACC",
+          ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR), QUESO CHEDDAR",
             "CEBOLLA BRUNOISE, PEPINOS AGRIDULCES Y SALSA ROYAL",
           ],
-          Precio: "0$",
+          precio: "0$",
           valor: 720,
-          Cantidad: 0,
+          cantidad: 0,
           url: "burger.jpg",
         },
         {
-          Nombre: "1/4 GANGS",
-          Caracteristicas: "SIN TACC",
-          Ingredientes: [
+          nombre: "1/4 GANGS",
+          caracteristicas: "SIN TACC",
+          ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR)",
             "DOBLE QUESO CHEDDAR y ADEREZADA CON SALSA ROYAL",
           ],
-          Precio: "0$",
+          precio: "0$",
           valor: 660,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "GIUSSEPE GARIBALDI",
-          Ingredientes: [
+          nombre: "GIUSSEPE GARIBALDI",
+          ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR)",
             "PROVOLETA, CEBOLLA, MORRON ASADO",
             "RUCULA ADEREZADA CON MAYOPESTO",
           ],
-          Precio: "0$",
+          precio: "0$",
           valor: 850,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "LUCKY LUCIANO",
-          Ingredientes: [
+          nombre: "LUCKY LUCIANO",
+          ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR)",
             "QUESO CHEDDAR, AROS DE CEBOLLA",
             "PANCETA CROCANTE, ADEREZADA CON SALSA GANGS",
           ],
-          Precio: "0$",
+          precio: "0$",
           valor: 760,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "MAFIA MEXICANA",
-          Ingredientes: [
+          nombre: "MAFIA MEXICANA",
+          ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR)",
             "QUESO CHEDDAR, PANCETA CROCANTE",
             "GUACAMOLE, Y CRUNCH DE NACHOS (opcion picante)",
           ],
-          Precio: "0$",
+          precio: "0$",
           valor: 930,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "BIG BANGS",
-          Ingredientes: [
+          nombre: "BIG BANGS",
+          ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR)",
             "QUESO CHEDDAR, LECHUGA, CEBOLLA",
             "PEPINOS AGRIDULCES, ADEREZADA CON SALSA GANGS",
           ],
-          Precio: "0$",
+          precio: "0$",
           valor: 720,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "CAESAR GANGS",
-          Ingredientes: [
+          nombre: "CAESAR GANGS",
+          ingredientes: [
             "MEDALLON DE POLLO CRISPY, LECHUGA",
             "QUESO PROVOLONE EN HEBRAS, ADEREZADA CON SALSA CAESAR",
           ],
-          Precio: "0$",
+          precio: "0$",
           valor: 790,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "JHON GOTTY",
-          Ingredientes: [
+          nombre: "JHON GOTTY",
+          ingredientes: [
             "POLLO CRISPY, QUESO CHEDDAR",
             "PEPINOS AGRIDULCES, COLESLAW",
             "ADEREZADA CON SALSA GANGS",
           ],
-          Precio: "0$",
-          valor: 770,
-          Cantidad: 0,
+          precio: "0$",
+          calor: 770,
+          cantidad: 0,
         },
+
         {
-          Nombre: "MINI GANGS BURGER",
-          Ingredientes: [
+          nombre: "MINI GANGS BURGER",
+          ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR), QUESO DAMBO O CHEDAR",
           ],
-          Precio: "0$",
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "MINI GANGS POLLO CRISPY",
-          Ingredientes: ["NUGGETS DE POLLO CRUJIENTE CON FRITAS"],
+          nombre: "MINI GANGS POLLO CRISPY",
+          ingredientes: ["NUGGETS DE POLLO CRUJIENTE CON FRITAS"],
           Precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "BARKER",
-          Caracteristicas: "VEGGIE",
-          Ingredientes: [
+          nombre: "BARKER",
+          caracteristicas: "VEGGIE",
+          ingredientes: [
             "MEDALLON DE GARBANZOS, TOMATE",
             "CEBOLLA MORADA, RUCULA ADEREZADA CON ALIOLI VEGANO",
           ],
-          Precio: "0$",
+          precio: "0$",
           valor: 720,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "NOT BURGER",
-          Caracteristicas: "VEGGIE",
-          Ingredientes: [
+          nombre: "NOT BURGER",
+          caracteristicas: "VEGGIE",
+          ingredientes: [
             "BURGER NOTCO, QUESO CHEDDAR",
             "TOMATE, CEBOLLA MORADA, RUCULA",
             "ADEREZADA CON ALIOLI VEGANO",
           ],
-          Precio: "0$",
+          precio: "0$",
           valor: 860,
-          Cantidad: 0,
+          cantidad: 0,
         },
       ],
     };
@@ -193,26 +193,30 @@ export default {
 
 
     incrementQuantity(hamburguesa) {
-      const precio = parseInt(hamburguesa.Precio.slice(0, -1))
+      const precio = parseInt(hamburguesa.precio.slice(0, -1))
       
-      hamburguesa.Precio = precio + hamburguesa.valor + "$";
+      hamburguesa.precio = precio + hamburguesa.valor + "$";
       
-      hamburguesa.Cantidad++;
+      hamburguesa.cantidad++;
 
     },
 
     decreaseQuantity(hamburguesa) {
      
-      if (hamburguesa.Cantidad === 0) {
+      if (hamburguesa.cantidad === 0) {
         return
       }
       
-       const precio = parseInt(hamburguesa.Precio.slice(0, -1))
-      hamburguesa.Precio = precio - hamburguesa.valor + "$";
+       const precio = parseInt(hamburguesa.precio.slice(0, -1))
+      hamburguesa.precio = precio - hamburguesa.valor + "$";
 
 
-      hamburguesa.Cantidad--;
+      hamburguesa.cantidad--;
 
+    },
+
+      addFoodAction(nuevaComida){
+      this.$store.dispatch('addFoodAction', nuevaComida)
     },
   },
 };
