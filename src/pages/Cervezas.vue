@@ -277,6 +277,7 @@ export default {
       cerveza.cantidad--;
     },
 
+
     addFoodAction(nuevaComida){
       this.$store.dispatch('addFoodAction', nuevaComida)
     },

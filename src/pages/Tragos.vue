@@ -14,14 +14,14 @@
     
       <v-card  max-width="850" class="orange accent-3 my-4 pa-4 rounded-br-xl "  elevation="5" v-for="items in tragos" :key="items">
 
-      <div class="font-weight-black display-1"> {{ items.Nombre }} </div>
+      <div class="font-weight-black display-1"> {{ items.nombre }} </div>
 
-      <div v-for="ingrediente in items.Ingredientes" :key="ingrediente">
+      <div v-for="ingrediente in items.ingredientes" :key="ingrediente">
         <div > {{ ingrediente }} </div>
       </div>
       
-      <div class="font-weight-medium" > {{ items.Precio }} </div>
-      <div class="font-weight-medium"> {{ items.Cantidad }} </div>
+      <div class="font-weight-medium" > {{ items.precio }} </div>
+      <div class="font-weight-medium"> {{ items.cantidad }} </div>
       <v-btn class= rounded-circle  color="black" dark @click="increment(items)">+</v-btn>
       <v-btn class= rounded-circle  color="black" dark @click="decrement(items)">-</v-btn>
 
@@ -41,236 +41,237 @@ export default {
     return {
       tragos: [
         {
-          Nombre: "GAMBINO'S COCKTAIL",
-          Ingredientes: ["BEEFEATER LONDON DRY GIN, JIM BEAN", "CARPANO ROSSO, LICOR DE DURAZNO", "AMARETTO Y GRANADINA"],
-          Precio: "0$",
+          nombre: "GAMBINO'S COCKTAIL",
+          ingredientes: ["BEEFEATER LONDON DRY GIN, JIM BEAN", "CARPANO ROSSO, LICOR DE DURAZNO", "AMARETTO Y GRANADINA"],
+          precio: "0$",
           valor: 600,
-          Cantidad: 0,
+          cantidad: 0,
           url: "corona.jpg"
         },
         {
-          Nombre: "LUCHESSE'S DRINK",
-          Ingredientes: ["JIM BEAN, MARTINI BLANCO, MARTINI ROSSO", "LICOR DE CEREZA, Y SYRUP DE CANELA ESPECIADA"],
-          Precio: "0$",
+          nombre: "LUCHESSE'S DRINK",
+          ingredientes: ["JIM BEAN, MARTINI BLANCO, MARTINI ROSSO", "LICOR DE CEREZA, Y SYRUP DE CANELA ESPECIADA"],
+          precio: "0$",
           valor: 600,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "GENOVESE FAMILY",
-          Ingredientes:  ["JIM BEAN HONEY, BRANDY BARDINET VSOP", "FRANGELICO, SIROPE DE VAINILLA"],
-          Precio: "0$",
+          nombre: "GENOVESE FAMILY",
+          ingredientes:  ["JIM BEAN HONEY, BRANDY BARDINET VSOP", "FRANGELICO, SIROPE DE VAINILLA"],
+          precio: "0$",
           valor: 600,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "CHICAGO OUTFIT",
-          Ingredientes: ["BEEFEATER LONDON DRY GIN, CAMPARI, GANCIA AMERICANO", "CARPANO ROSSO Y LICOR DE DURAZNO"],
-          Precio: "0$",
+          nombre: "CHICAGO OUTFIT",
+          ingredientes: ["BEEFEATER LONDON DRY GIN, CAMPARI, GANCIA AMERICANO", "CARPANO ROSSO Y LICOR DE DURAZNO"],
+          precio: "0$",
           valor: 600,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "CHARLESTON CLUB",
-          Ingredientes:   ["BRANDY BARDINET VSOP, MARTINI BLANCO, TRIPLE SEC", "SYRUP DE AZUCAR, MANZANA MACHACADA Y LICOR DE CEREZA"],
-          Precio: "0$",
+          nombre: "CHARLESTON CLUB",
+          ingredientes:   ["BRANDY BARDINET VSOP, MARTINI BLANCO, TRIPLE SEC", "SYRUP DE AZUCAR, MANZANA MACHACADA Y LICOR DE CEREZA"],
+          precio: "0$",
           valor: 600,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "NEGRONI",
-          Ingredientes: ["BEEFEATER LONDON DRY GIN, CINZANO ROSSO Y CAMPARI"],
-          Precio: "0$",
+          nombre: "NEGRONI",
+          ingredientes: ["BEEFEATER LONDON DRY GIN, CINZANO ROSSO Y CAMPARI"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "HONEY BOULEVARD",
-          Ingredientes: ["JIM BEAN HONEY, CINZANO ROSSO Y CAMPARI"],
-          Precio: "0$",
+          nombre: "HONEY BOULEVARD",
+          ingredientes: ["JIM BEAN HONEY, CINZANO ROSSO Y CAMPARI"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "MANHATTAN DELICE",
-          Ingredientes: ["JIM BEAN, VINO BLANCO DULCE, MARTINI ROSSO Y ANGOSTURA"],
-          Precio: "0$",
+          nombre: "MANHATTAN DELICE",
+          ingredientes: ["JIM BEAN, VINO BLANCO DULCE, MARTINI ROSSO Y ANGOSTURA"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
-        {
-          Nombre: "CHERRY MARTINI",
-          Ingredientes:  ["BRIGHTON LONDON DRY GIN, LICOR DE CEREZA", "TRIPLE SEC Y CARPANO ROSSO"],
-          Precio: "0$",
+        
+          {
+          nombre: "CHERRY MARTINI",
+          ingredientes:  ["BRIGHTON LONDON DRY GIN, LICOR DE CEREZA", "TRIPLE SEC Y CARPANO ROSSO"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "JIM FASHIONED",
-          Ingredientes: ["JIM BEAN, AMARETTO, AZUCAR MORENA Y ANGOSTURA"],
-          Precio: "0$",
+          nombre: "JIM FASHIONED",
+          ingredientes: ["JIM BEAN, AMARETTO, AZUCAR MORENA Y ANGOSTURA"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "JAMESON APPLE SOUR",
-          Ingredientes: ["JAMESON, MANZANA MACHACADA, SYRUP DE JENGIBRE Y LIMA"],
-          Precio: "0$",
+          nombre: "JAMESON APPLE SOUR",
+          ingredientes: ["JAMESON, MANZANA MACHACADA, SYRUP DE JENGIBRE Y LIMA"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "ABSOLUT COSMO",
-          Ingredientes:  ["ABSOLUT, TRIPLE SEC, LIMA, FRUTOS ROJOS Y SYRUP DE AZUCAR"],
-          Precio: "0$",
+          nombre: "ABSOLUT COSMO",
+          ingredientes:  ["ABSOLUT, TRIPLE SEC, LIMA, FRUTOS ROJOS Y SYRUP DE AZUCAR"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "BRAMBLE",
-          Ingredientes:  ["BRIGHTON LONDON DRY GIN, LICOR DE CASSIS", "LIMA Y SYRUP DE AZUCAR"],
-          Precio: "0$",
+          nombre: "BRAMBLE",
+          ingredientes:  ["BRIGHTON LONDON DRY GIN, LICOR DE CASSIS", "LIMA Y SYRUP DE AZUCAR"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "APPLE MOSCOW",
-          Ingredientes:  ["VODKA SMIRNOFF, MANZANA MACHACADA", "LIMA, SYRUP DE AZUCAR Y GINGER ALE"],
-          Precio: "0$",
+          nombre: "APPLE MOSCOW",
+          ingredientes:  ["VODKA SMIRNOFF, MANZANA MACHACADA", "LIMA, SYRUP DE AZUCAR Y GINGER ALE"],
+          precio: "0$",
           valor: 550,
-          Cantidad  : 0,
+          cantidad  : 0,
         },
         {
-          Nombre: "BIANCO CUCUMBER SPRITZ",
-          Ingredientes:  ["APEROL, PISCO CAPEL, VINO BLANCO DULCE, POMELO Y PEPINO"],
-          Precio: "0$",
+          nombre: "BIANCO CUCUMBER SPRITZ",
+          ingredientes:  ["APEROL, PISCO CAPEL, VINO BLANCO DULCE, POMELO Y PEPINO"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "APEROL AMERICAN SPRITZ",
-          Ingredientes: ["APEROL, GANCIA AMERICANO Y ESPUMANTE"],
-          Precio: "0$",
+          nombre: "APEROL AMERICAN SPRITZ",
+          ingredientes: ["APEROL, GANCIA AMERICANO Y ESPUMANTE"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "MOJITOS",
-          Ingredientes: ["HAVANA BLANCO, LIMON, MENTA", "AZUCAR, SPRITE Y FRUTAS DE ESTACION"],
-          Precio: "0$",
+          nombre: "MOJITOS",
+          ingredientes: ["HAVANA BLANCO, LIMON, MENTA", "AZUCAR, SPRITE Y FRUTAS DE ESTACION"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "GIN TONICS",
-          Ingredientes: ["BRIGHTON LONDON DRY GIN, AGUA TONICA, FRUTAS DE ESTACION", "PEPINO, ESPECIADO CON PIMIENTA NEGRA Y ROMERO"],
-          Precio: "0$",
+          nombre: "GIN TONICS",
+          ingredientes: ["BRIGHTON LONDON DRY GIN, AGUA TONICA, FRUTAS DE ESTACION", "PEPINO, ESPECIADO CON PIMIENTA NEGRA Y ROMERO"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "MARGARITAS",
-          Ingredientes: ["TEQUILA BLANCO, TRIPLE SEC LIMON, FRUTAS DE ESTACION"],
-          Precio: "0$",
+          nombre: "MARGARITAS",
+          ingredientes: ["TEQUILA BLANCO, TRIPLE SEC LIMON, FRUTAS DE ESTACION"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "CAIPIS",
-          Ingredientes:  ["VODKA SMIRNOFF/CACHAZA O GANCIA, LIMA", "LIMON, AZUCAR Y FRUTAS DE ESTACION"],
-          Precio: "0$",
+          nombre: "CAIPIS",
+          ingredientes:  ["VODKA SMIRNOFF/CACHAZA O GANCIA, LIMA", "LIMON, AZUCAR Y FRUTAS DE ESTACION"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "BRAMBLE",
-          Ingredientes:  ["BRIGHTON LONDON DRY GIN, LICOR DE CASSIS", "LIMA Y SYRUP DE AZUCAR"],
-          Precio: "0$",
+          nombre: "BRAMBLE",
+          ingredientes:  ["BRIGHTON LONDON DRY GIN, LICOR DE CASSIS", "LIMA Y SYRUP DE AZUCAR"],
+          precio: "0$",
           valor: 550,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "DAIQUIRIS",
-          Ingredientes: ["HAVANA BLANCO, LIMON, FRUTAS DE ESTACION Y AZUCAR"],
-          Precio: "0$",
+          nombre: "DAIQUIRIS",
+          ingredientes: ["HAVANA BLANCO, LIMON, FRUTAS DE ESTACION Y AZUCAR"],
+          precio: "0$",
           valor: 600,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "MAI TAI",
-          Ingredientes: ["HAVANA BLANCO, HAVANA ANIEJO ESPECIAL, TRIPLE SEC", "LIMA, SYRUP DE AZUCAR MORENA Y AMARETTO"],
-          Precio: "0$",
+          nombre: "MAI TAI",
+          ingredientes: ["HAVANA BLANCO, HAVANA ANIEJO ESPECIAL, TRIPLE SEC", "LIMA, SYRUP DE AZUCAR MORENA Y AMARETTO"],
+          precio: "0$",
           valor: 650,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "ZOMBIE",
-          Ingredientes: ["HAVANA BLANCO, HAVANA ANIEJO ESPECIAL, LICOR DE DURAZNO", "NARANJA, ANANA, LIMA, SYRUP DE AZUCAR Y GRANADINA"],
-          Precio: "0$",
+          nombre: "ZOMBIE",
+          ingredientes: ["HAVANA BLANCO, HAVANA ANIEJO ESPECIAL, LICOR DE DURAZNO", "NARANJA, ANANA, LIMA, SYRUP DE AZUCAR Y GRANADINA"],
+          precio: "0$",
           valor: 650,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "SINGAPORE SLING",
-          Ingredientes:  ["BRIGHTON LONDON DRY GIN, JAGERMEISTER, LICOR DE CEREZA", "TRIPLE SEC, LIMON , ANANA, SYRUP DE AZUCAR", "GRANADINA, ANGOSTURA"],
-          Precio: "0$",
+          nombre: "SINGAPORE SLING",
+          ingredientes:  ["BRIGHTON LONDON DRY GIN, JAGERMEISTER, LICOR DE CEREZA", "TRIPLE SEC, LIMON , ANANA, SYRUP DE AZUCAR", "GRANADINA, ANGOSTURA"],
+          precio: "0$",
           valor: 650,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "ONO LOA",
-          Ingredientes: ["HAVANA BLANCO, HAVANA ANIEJADO ESPECIAL, MALIBU", "JAGERMEISTER, TRIPLE SEC, DURAZNO Y SYRUP DE AZUCAR"],
-          Precio: "0$",
+          nombre: "ONO LOA",
+          ingredientes: ["HAVANA BLANCO, HAVANA ANIEJADO ESPECIAL, MALIBU", "JAGERMEISTER, TRIPLE SEC, DURAZNO Y SYRUP DE AZUCAR"],
+          precio: "0$",
           valor: 650,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "MALIBUE SKY",
-          Ingredientes:   ["GANCIA AMERICANO, MALIBU, TRIPLE SEC", "ANANA, BLUE CURACAO, SYRUP DE AZUCAR"],
-          Precio: "0$",
+          nombre: "MALIBUE SKY",
+          ingredientes:   ["GANCIA AMERICANO, MALIBU, TRIPLE SEC", "ANANA, BLUE CURACAO, SYRUP DE AZUCAR"],
+          precio: "0$",
           valor: 650,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "BOTICARIO",
-          Ingredientes: ["FERNET BRANCA, CINZANO ROSSO, LIMON", "SYRUP DE AZUCAR, POMELO"],
-          Precio: "0$",
+          nombre: "BOTICARIO",
+          ingredientes: ["FERNET BRANCA, CINZANO ROSSO, LIMON", "SYRUP DE AZUCAR, POMELO"],
+          precio: "0$",
           valor: 500,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "VERMU Y GRAPE TONIC",
-          Ingredientes: ["MARTINI BLANCO, MARTINI ROSSO", "UVAS MACHACADAS, AGUA TONICA"],
-          Precio: "0$",
+          nombre: "VERMU Y GRAPE TONIC",
+          ingredientes: ["MARTINI BLANCO, MARTINI ROSSO", "UVAS MACHACADAS, AGUA TONICA"],
+          precio: "0$",
           valor: 500,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "CINZANO SPRITZER",
-          Ingredientes: ["CINZANO ROSSO, SPRITE Y PEPINO"],
-          Precio: "0$",
+          nombre: "CINZANO SPRITZER",
+          ingredientes: ["CINZANO ROSSO, SPRITE Y PEPINO"],
+          precio: "0$",
           valor: 500,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "CYNAR JULEP",
-          Ingredientes: ["CYNAR, LIMON, MENTA, AZUCAR Y POMELO"],
-          Precio: "0$",
+          nombre: "CYNAR JULEP",
+          ingredientes: ["CYNAR, LIMON, MENTA, AZUCAR Y POMELO"],
+          precio: "0$",
           valor: 500,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "BALON MARTINI",
-          Ingredientes: ["MARTINI BIANCO, JAGERMEISTER Y SPRITE"],
-          Precio: "0$",
+          nombre: "BALON MARTINI",
+          ingredientes: ["MARTINI BIANCO, JAGERMEISTER Y SPRITE"],
+          precio: "0$",
           valor: 500,
-          Cantidad: 0,
+          cantidad: 0,
         },
         {
-          Nombre: "CAMPARI ROSSO",
-          Ingredientes: ["CAMPARI, CINZANO ROSSO Y POMELO"],
-          Precio: "0$",
+          nombre: "CAMPARI ROSSO",
+          ingredientes: ["CAMPARI, CINZANO ROSSO Y POMELO"],
+          precio: "0$",
           valor: 500,
-          Cantidad: 0,
+          cantidad: 0,
         },
       ],
 
@@ -284,8 +285,8 @@ export default {
 
   methods: {
     increment(trago) {
-      const precio = parseInt(trago.Precio.slice(0, -1))
-      trago.Precio = precio + trago.valor + "$";
+      const precio = parseInt(trago.precio.slice(0, -1))
+      trago.precio = precio + trago.valor + "$";
 
       trago.Cantidad++;
     },
@@ -295,15 +296,13 @@ export default {
        if (trago.Cantidad === 0) {
         return
       }
-        
-
-      const precio = parseInt(trago.Precio.slice(0, -1))
-      trago.Precio = precio - trago.valor + "$"
+      
+      const precio = parseInt(trago.precio.slice(0, -1))
+      trago.precio = precio - trago.valor + "$";
      
-      trago.Cantidad--;
+      trago.cantidad--;
     
     },
-
 
     }
   }
