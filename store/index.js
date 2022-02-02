@@ -30,8 +30,14 @@ export default new Vuex.Store({
             state.comidas = storedFood
         },
 
-        DELETE_COMIDA(state, storedFood) {
-            state.comidas = storedFood
+        DELETE_COMIDA(state, deleteFood) {
+            state.comidas = deleteFood
+
+            const borrar = state.comidas.splice(1, 1)
+
+            if (borrar > 1) {
+                return
+            }
         }
 
 
@@ -47,8 +53,8 @@ export default new Vuex.Store({
             context.commit('SET_COMIDA_STORAGE', storedFood)
         },
 
-        deleteComidaAction(context, storedFood) {
-            context.commit('DELETE_COMIDA', storedFood)
+        deleteComidaAction(context, deleteFood) {
+            context.commit('DELETE_COMIDA', deleteFood)
         }
     },
 })

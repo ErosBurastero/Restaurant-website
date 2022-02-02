@@ -32,14 +32,26 @@ export default {
     }
 
     this.$store.dispatch('setComidasFromStorage', valorGuardado);
-    this.$store.dispatch('deleteComidaAction', )
+    
   },
 
   methods: {  
-    deleteFood() {
-      this.comida.slice(0, 2)
+    deleteFood(comida) {
+      this.$store.state.comidas.splice(this.$store.state.comidas.indexOf(comida), 1 );
+
+       if (borrar != 1) {
+        return
+      }
+
+      const borrar =  this.$store.state.comidas.splice(this.$store.state.comidas.indexOf(comida), 1 );
+
+     
+
+       
+      this.$store.dispatch('deleteComidaAction', borrar )
+
     }
-    
+
     }
   
   
