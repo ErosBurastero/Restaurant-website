@@ -33,11 +33,6 @@ export default new Vuex.Store({
         DELETE_COMIDA(state, deleteFood) {
             state.comidas = deleteFood
 
-            const borrar = state.comidas.splice(1, 1)
-
-            if (borrar > 1) {
-                return
-            }
         }
 
 

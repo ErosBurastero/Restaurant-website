@@ -274,11 +274,13 @@ export default {
         },
       ],
 
-      comida: ''
+     
     };
 
     
   },
+
+
 
   methods: {
     increment(trago) {
@@ -302,9 +304,6 @@ export default {
     
     },
 
-    
-
-    
 
     }
   }
