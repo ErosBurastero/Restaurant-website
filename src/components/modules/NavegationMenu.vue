@@ -15,22 +15,22 @@
 
       <v-tab class="black--text" href="/Hamburguesas">
         Hamburguesas
-        <v-icon>mdi-food</v-icon>
+        <v-icon>mdi-hamburger</v-icon>
       </v-tab>
 
        <v-tab class="black--text" href="/Comidas">
         Comidas
-        <v-icon>mdi-food-fork-drink</v-icon>
+        <v-icon>mdi-food-turkey</v-icon>
       </v-tab>
 
-      <v-tab class="black--text" href="/Tragos">
-        Tragos
-        <v-icon>mdi-glass-cocktail</v-icon>
+      <v-tab class="black--text" href="/Bebidas">
+        Bebidas
+        <v-icon>mdi-cup</v-icon>
       </v-tab>
 
        <v-tab class="black--text" href="/Carrito">
         Carrito
-        <v-icon>mdi-cart-outline</v-icon>
+        <v-icon>mdi-cart-variant</v-icon>
       </v-tab>
 
     </v-tabs>

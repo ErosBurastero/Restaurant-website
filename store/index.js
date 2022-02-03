@@ -33,6 +33,14 @@ export default new Vuex.Store({
         DELETE_COMIDA(state, deleteFood) {
             state.comidas = deleteFood
 
+            const borrado = JSON.parse(localStorage.setItem([...state.comidas, deleteFood]))
+
+            if (borrado && borrado.length > 0) {
+                localStorage.setItem(deleteFood)
+            }
+
+
+
         }
 
 

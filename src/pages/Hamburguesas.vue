@@ -10,7 +10,7 @@
       :key="index"
     >
 
-    <v-img class="mr-" :src="item.url" max-height="200" max-width="200" contain></v-img>
+    <v-img class="ml-" :src="item.url" max-height="200" max-width="200" contain></v-img>
 
       <div class="pl-4 ">
         <div class="font-weight-black display-1">{{ item.nombre }}</div>
