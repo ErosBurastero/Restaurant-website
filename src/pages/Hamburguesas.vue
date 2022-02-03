@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column align-center px-5 " >
+  <div class="d-flex flex-column align-center px-5  grey " >
     <v-card
       
       max-width="850"

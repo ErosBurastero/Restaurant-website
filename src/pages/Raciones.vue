@@ -1,5 +1,5 @@
 <template>
-  <div  class="d-flex flex-column align-center px-5 ">
+  <div  class="d-flex flex-column align-center px-5 grey">
       <div class="text-center my-5">
     <v-btn  href="/Comidas" rounded  color="orange accent-3 black--text"  dark >COMIDAS</v-btn>
     <v-btn  href="/Raciones" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >RACIONES</v-btn>

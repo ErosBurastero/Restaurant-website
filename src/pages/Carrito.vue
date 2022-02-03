@@ -1,5 +1,5 @@
 <template>
-<div  class="d-flex flex-column align-center px-5 ">
+<div  class="d-flex flex-column align-center px-5  grey">
   <v-card max-width="850" min-width="386" class="card orange accent-3 my-4 pa-4 rounded-br-xl ">
    <ul class="my-4" v-for="(comida, index) in $store.state.comidas"
       :key="index">
@@ -57,5 +57,6 @@ export default {
 </script>
 
 <style> 
+
 
 </style>
