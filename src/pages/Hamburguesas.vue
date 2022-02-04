@@ -79,6 +79,7 @@ export default {
           precio: "0$",
           valor: 660,
           cantidad: 0,
+          
         },
         {
           nombre: "GIUSSEPE GARIBALDI",
@@ -90,6 +91,7 @@ export default {
           precio: "0$",
           valor: 850,
           cantidad: 0,
+          
         },
         {
           nombre: "LUCKY LUCIANO",

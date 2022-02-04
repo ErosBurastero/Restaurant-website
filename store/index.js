@@ -33,24 +33,8 @@ export default new Vuex.Store({
         DELETE_COMIDA(state, deleteFood) {
             state.comidas = [...state.comidas, deleteFood]
 
-            const borrarComida = state.comidas.splice(state.comidas.indexOf('Carrito', 1))
-
-            if (borrarComida && borrarComida.length === 0) {
-                localStorage.setItem('Carrito', JSON.stringify([...state.comidas, deleteFood]))
-
-            }
-
-
-
-
-
-
-
-
 
         }
-
-
 
     },
 
