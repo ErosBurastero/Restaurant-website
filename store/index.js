@@ -18,7 +18,7 @@ export default new Vuex.Store({
 
             const valorGuardado = JSON.parse(localStorage.getItem('Carrito'))
 
-            if (valorGuardado && valorGuardado.length > 0) {
+            if (valorGuardado && valorGuardado.length > 1) {
 
                 localStorage.setItem('Carrito', JSON.stringify([...valorGuardado, nuevaComida]))
             } else {
@@ -31,9 +31,15 @@ export default new Vuex.Store({
         },
 
         DELETE_COMIDA(state, deleteFood) {
-            state.comidas = [...state.comidas, deleteFood]
+            state.comidas = deleteFood
 
+            const valor = JSON.parse(localStorage.getItem('Carrito'))
 
+            if (valor && valor.length < 1) {
+                localStorage.removeItem('Carrito', JSON.stringify([...valor, deleteFood]))
+            } else {
+                localStorage.removeItem('Carrito', JSON.stringify([...state.comidas]))
+            }
         }
 
     },

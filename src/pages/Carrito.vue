@@ -32,7 +32,7 @@ export default {
 
     this.$store.dispatch('setComidasFromStorage', valorGuardado);
 
-
+  
    
    
   },
@@ -45,7 +45,7 @@ export default {
             if (borrar != 1) {
                 return
             }
-              this.$store.dispatch('deleteComidaAction', comida)
+              this.$store.dispatch('deleteComidaAction')
     }
 
     }
@@ -58,6 +58,5 @@ export default {
 </script>
 
 <style> 
-
 
 </style>

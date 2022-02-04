@@ -70,9 +70,9 @@ export default {
         {
           nombre: "LANGOSTINOS",
           ingredientes: ["EMPANADOS EN PANKO CON DIPS DE SALSA TERIYAKI",],
-          precio: "0$",
+          precio: "1800$",
           valor: 1800,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -80,9 +80,9 @@ export default {
         {
           nombre: "RABAS",
           ingredientes: ["TUBO DE CALAMAR TIERNIZADO CON DIPS DE ALIOLI",],
-          precio: "0$",
+          precio: "1500$",
           valor: 1500,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -90,9 +90,9 @@ export default {
         {
           nombre: "RIBBS BBQ",
           ingredientes: ["COSTILLAR DE CERDO BRASEADO 4HS CON SALSA BBQ", "ACOMPANADO DE BATATAS FRITAS Y ENSALADA COLESAW"],
-          precio: "0$",
+          precio: "950$",
           valor: 950,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -100,9 +100,9 @@ export default {
         {
           nombre: "BRUSCHETTA VEGGIE",
           ingredientes: ["PAN DE CAMPO TOSTADO EN OLIVA, HUEVO REVUELTO","GUACAMOLE Y PORTOBELLOS SALTEADOS(2U)"],
-          precio: "0$",
+          precio: "600$",
           valor: 600,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -110,9 +110,9 @@ export default {
         {
           nombre: "BRUSCHETTA IBERICA",
           ingredientes: ["PAN DE CAMPO TOSTADO EN OLIVA, RUCULA, TOMATES SECOS","JAMON IBERICO Y MAYOPESTO DE LA CASA(2U)"],
-          precio: "0$",
+          precio: "600$",
           valor: 600,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -120,9 +120,9 @@ export default {
         {
           nombre: "BURRITOS GRILL",
           ingredientes: ["POLLO A LA PLANCHA O CRISPY, CEBOLLA, MORRON ASADO", "LECHUGA Y QUESO CREMA DE CIBOULETTE"],
-          precio: "0$",
+          precio: "600$",
           valor: 600,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -130,9 +130,9 @@ export default {
          {
           nombre: "PICADA MAFIA CALABRESA",
           ingredientes: ["MUZZA MILA, AROS DE CEBOLLA, RABAS, POLLO CRISPY, PAPAS FRITAS", "BATATAS FRITAS ACOMPA;ADOS DE DIPS DE CHEDDAR,", "BARBACOA Y MOSTAZA DULCE  "], 
-          precio: "0$",
+          precio: "1500$",
           valor: 1500,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -140,9 +140,9 @@ export default {
          {
           nombre: "PICADA CAMORRA",
           ingredientes: ["QUESO FONTINA, PATEGRAS, QUESO AHUMADO, ASADITO ARGENTINO", "JAMON IBERICO, SALAME, ACEITUNAS Y TOMATES SECOS EN CONSERVA"],
-          precio: "0$",
+          precio: "1800$",
           valor: 1800,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -150,9 +150,9 @@ export default {
          {
           nombre: "SANDWICH SICILIANO",
           ingredientes: ["BONDIOLA BRASEADA CON COLESAW", "ADEREZADA CON SALSA GANGS"],
-          precio: "0$",
+          precio: "730$",
           valor: 730,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -160,9 +160,9 @@ export default {
          {
           nombre: "SANDWICH NAPOLES",
           ingredientes: ["ASADITO ARGENTINO EN FINAS FETAS, QUESO DAMBO", "TOMATES SECOS, RUCULA Y MAYOPESTO"],
-          precio: "0$",
+          precio: "730$",
           valor: 730,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -170,9 +170,9 @@ export default {
          {
           nombre: "SANDWICH PALERMO",
           ingredientes: ["POLLO A LA PLANCHA, QUESO CHEDDAR O DAMBO, TOMATE,", "LECHUGA, ADEREZADO CON SALSA ALIOLI DE LA CASA"],
-          precio: "0$",
+          precio: "730$",
           valor: 730,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -180,9 +180,9 @@ export default {
          {
           nombre: "SANDWICH VEGGIE",
           ingredientes: ["BERENJENA A LA PLANCHA, TOMATES SECOS, QUESO PARMESANO", "EN HEBRAS, RUCULA, ADEREZADO CON MAYOVEGAN"],
-          precio: "0$",
+          precio: "730$",
           valor: 730,
-          cantidad: 0,
+          cantidad: 1,
           url: "",
 
         },
@@ -199,7 +199,7 @@ export default {
 
     
     decreaseQuantity(comida) {
-      if (comida.cantidad === 0) {
+      if (comida.cantidad === 1) {
         return
     }
     const precio = parseInt(comida.precio.slice(0, -1))

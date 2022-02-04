@@ -68,80 +68,80 @@ export default {
                 {
                     nombre: "AMERICAN GANGSTER",
                     ingredientes: "PAPAS FRITAS, SALSA CHEDDAR DE LA CASA Y PANCETA",
-                    precio: "0$",
+                    precio: "550$",
                     valor: 550,
-                    cantidad: 0,
+                    cantidad: 1,
                     url: "",
                 },
 
                 {
                     nombre: "PAPAS 4 MAFIAS",
                     ingredientes: "PAPAS FRITAS, BONDIOLA BRASEADA BA;ADAS EN SALSA CHEDDAR",
-                    precio: "0$",
+                    precio: "650$",
                     valor: 650,
-                    cantidad: 0,
+                    cantidad: 1,
                     url: "",
                 },
 
                 {
                     nombre: "PAPAS GANGSTER",
                     ingredientes: "PAPAS FRITAS, CHESSEBURGER, CEBOLLA CARAMELIZADA Y QUESO CREMA DE CIBOULETTE",
-                    precio: "0$",
+                    precio: "700$",
                     valor: 700,
-                    cantidad: 0,
+                    cantidad: 1,
                     url: "",
                 },
 
                 {
                     nombre: "PAPAS FRITAS",
-                    precio: "0$",
+                    precio: "500$",
                     valor: 500,
-                    cantidad: 0,
+                    cantidad: 1,
                     url: "",
                 },
 
                 {
                     nombre: "BATATAS FRITAS",
                     ingredientes: "BATATAS FRITAS CON DIPS DE MOSTAZA DULCE",
-                    precio: "0$",
+                    precio: "500$",
                     valor: 500,
-                    cantidad: 0,
+                    cantidad: 1,
                     url: "",
                 },
 
                 {
                     nombre: "NACHOS",
                     ingredientes: "NACHOS ADEREZADOS CON SALSA CHEDDAR DE LA CASA O GUACAMOLE CASERO",
-                    precio: "0$",
+                    precio: "530$",
                     valor: 530,
-                    cantidad: 0,
+                    cantidad: 1,
                     url: "",
                 },
 
                 {
                     nombre: "AROS DE CEBOLLA",
                     ingredientes: "AROS DE CEBOLLA REBOZADOS CON DIPS DE BARBACOA",
-                    precio: "0$",
+                    precio: "500$",
                     valor: 500,
-                    cantidad: 0,
+                    cantidad: 1,
                     url: "",
                 },
 
                 {
                     nombre: "POLLO CRISPY",
                     ingredientes: "TROZOS DE PECHUGA DE POLLO EMPANADOS EN CEREALES CON DIPS DE MOSTAZA DULCE",
-                    precio: "0$",
+                    precio: "650$",
                     valor: 650,
-                    cantidad: 0,
+                    cantidad: 1,
                     url: "",
                 },
 
                 {
                     nombre: "MUZZA MILA",
                     ingredientes: "QUESO MOZZARELLA REBOZADO CON DIPS DE SALSA DE TOMATE FRESCA",
-                    precio: "0$",
+                    precio: "600$",
                     valor: 600,
-                    cantidad: 0,
+                    cantidad: 1,
                     url: "",
                 },
             ]
@@ -157,7 +157,7 @@ export default {
 
 
         decreaseQuantity(racion) {
-            if (racion.cantidad === 0) {
+            if (racion.cantidad === 1) {
                 return
             }
             const duplicar = parseInt(racion.precio.slice(0, -1))

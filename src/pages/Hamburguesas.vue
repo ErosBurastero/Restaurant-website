@@ -64,9 +64,9 @@ export default {
             "DOBLE MEDALLON DE CARNE (90GR), QUESO CHEDDAR",
             "CEBOLLA BRUNOISE, PEPINOS AGRIDULCES Y SALSA ROYAL",
           ],
-          precio: "0$",
+          precio: "720$",
           valor: 720,
-          cantidad: 0,
+          cantidad: 1,
           url: "burger.jpg",
         },
         {
@@ -76,9 +76,9 @@ export default {
             "DOBLE MEDALLON DE CARNE (90GR)",
             "DOBLE QUESO CHEDDAR y ADEREZADA CON SALSA ROYAL",
           ],
-          precio: "0$",
+          precio: "660$",
           valor: 660,
-          cantidad: 0,
+          cantidad: 1,
           
         },
         {
@@ -88,9 +88,9 @@ export default {
             "PROVOLETA, CEBOLLA, MORRON ASADO",
             "RUCULA ADEREZADA CON MAYOPESTO",
           ],
-          precio: "0$",
+          precio: "850$",
           valor: 850,
-          cantidad: 0,
+          cantidad: 1,
           
         },
         {
@@ -100,9 +100,9 @@ export default {
             "QUESO CHEDDAR, AROS DE CEBOLLA",
             "PANCETA CROCANTE, ADEREZADA CON SALSA GANGS",
           ],
-          precio: "0$",
+          precio: "760$",
           valor: 760,
-          cantidad: 0,
+          cantidad: 1,
         },
         {
           nombre: "MAFIA MEXICANA",
@@ -111,9 +111,9 @@ export default {
             "QUESO CHEDDAR, PANCETA CROCANTE",
             "GUACAMOLE, Y CRUNCH DE NACHOS (opcion picante)",
           ],
-          precio: "0$",
+          precio: "930$",
           valor: 930,
-          cantidad: 0,
+          cantidad: 1,
         },
         {
           nombre: "BIG BANGS",
@@ -122,9 +122,9 @@ export default {
             "QUESO CHEDDAR, LECHUGA, CEBOLLA",
             "PEPINOS AGRIDULCES, ADEREZADA CON SALSA GANGS",
           ],
-          precio: "0$",
+          precio: "720$",
           valor: 720,
-          cantidad: 0,
+          cantidad: 1,
         },
         {
           nombre: "CAESAR GANGS",
@@ -132,9 +132,9 @@ export default {
             "MEDALLON DE POLLO CRISPY, LECHUGA",
             "QUESO PROVOLONE EN HEBRAS, ADEREZADA CON SALSA CAESAR",
           ],
-          precio: "0$",
+          precio: "790$",
           valor: 790,
-          cantidad: 0,
+          cantidad: 1,
         },
         {
           nombre: "JHON GOTTY",
@@ -143,9 +143,9 @@ export default {
             "PEPINOS AGRIDULCES, COLESLAW",
             "ADEREZADA CON SALSA GANGS",
           ],
-          precio: "0$",
+          precio: "770$",
           calor: 770,
-          cantidad: 0,
+          cantidad: 1,
         },
 
         {
@@ -153,16 +153,16 @@ export default {
           ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR), QUESO DAMBO O CHEDAR",
           ],
-          precio: "0$",
+          precio: "550$",
           valor: 550,
-          cantidad: 0,
+          cantidad: 1,
         },
         {
           nombre: "MINI GANGS POLLO CRISPY",
           ingredientes: ["NUGGETS DE POLLO CRUJIENTE CON FRITAS"],
-          Precio: "0$",
+          Precio: "550$",
           valor: 550,
-          cantidad: 0,
+          cantidad: 1,
         },
         {
           nombre: "BARKER",
@@ -171,9 +171,9 @@ export default {
             "MEDALLON DE GARBANZOS, TOMATE",
             "CEBOLLA MORADA, RUCULA ADEREZADA CON ALIOLI VEGANO",
           ],
-          precio: "0$",
+          precio: "720$",
           valor: 720,
-          cantidad: 0,
+          cantidad: 1,
         },
         {
           nombre: "NOT BURGER",
@@ -183,9 +183,9 @@ export default {
             "TOMATE, CEBOLLA MORADA, RUCULA",
             "ADEREZADA CON ALIOLI VEGANO",
           ],
-          precio: "0$",
+          precio: "860$",
           valor: 860,
-          cantidad: 0,
+          cantidad: 1,
         },
       ],
     };
@@ -205,7 +205,7 @@ export default {
 
     decreaseQuantity(hamburguesa) {
      
-      if (hamburguesa.cantidad === 0) {
+      if (hamburguesa.cantidad === 1) {
         return
       }
       

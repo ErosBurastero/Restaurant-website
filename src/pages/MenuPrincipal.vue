@@ -72,7 +72,8 @@
 
 <style scoped>
 
-
-
+  template{
+    background: grey;
+  }
 </style>
 

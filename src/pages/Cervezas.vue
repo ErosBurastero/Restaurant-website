@@ -48,210 +48,210 @@ export default {
         {
              nombre: "PATAGONIA BOHEMIAN PILSENER",
              medida: "740CC",
-             precio: "0$",
+             precio: "550$",
              valor: 550,
-             cantidad: 0,
+             cantidad: 1,
              url: "patagoniaPilsener.jpg",
         },
          {
              nombre: "PATAGONIA HOPPER LAGER",
              medida: "730CC",
-             precio: "0$",
+             precio: "550$",
              valor: 550,
-             cantidad: 0,
+             cantidad: 1,
              url: "patagoniaLager.jpg",
         },
 
          {
              nombre: "PATAGONIA VERA IPA",
              medida: " 730CC",
-             precio: "0$",
+             precio: "550$",
              valor: 550,
-             cantidad: 0,
+             cantidad: 1,
              url: "veraGrande.jpg",
         },
 
          {
              nombre: "PATAGONIA KUNE ",
              medida: "710CC",
-             precio: "0$",
+             precio: "550$",
              valor: 550,
-             cantidad: 0,
+             cantidad: 1,
              url: "patagoniaKune.jpg",
         },
 
          {
              nombre: "PATAGONIA WEISSE",
              medida: "740CC",
-             precio: "0$",
+             precio: "550$",
              valor: 550,
-             cantidad: 0,
+             cantidad: 1,
              url: "patagoniaWeisse.jpg",
         },
 
          {
              nombre: "STELLA ARTOIS",
              medida: "1 LITRO",
-             precio: "0$",
+             precio: "550$",
              valor: 550,
-             cantidad: 0,
+             cantidad: 1,
              url: "stellaArtois.jpg",
         },
 
          {
              nombre: "HEINEKEN",
              medida: "710CC",
-             precio: "0$",
+             precio: "500$",
              valor: 500,
-             cantidad: 0,
+             cantidad: 1,
              url: "heineken.jpg",
         },
 
          {
              nombre: "CORONA",
              medida: "710CC",
-             precio: "0$",
+             precio: "500$",
              valor: 500,
-             cantidad: 0,
+             cantidad: 1,
              url: "corona.jpg",
         },
 
         {
              nombre: "PINTA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "pinta.jpg",
         },
 
         {
              nombre: "PINTA",
              medida: "1 LITRO",
-             precio: "0$",
+             precio: "650$",
              valor: 650,
-             cantidad: 0,
+             cantidad: 1,
              url: "pinta.jpg",
         },
 
         {
              nombre: "PINTA",
              medida: "2L",
-             precio: "0$",
+             precio: "1200$",
              valor: 1200,
-             cantidad: 0,
+             cantidad: 1,
              url: "pinta.jpg",
         },
 
         {
              nombre: "GLOWLER",
-             precio: "0$",
+             precio: "650$",
              valor: 650,
-             cantidad: 0,
+             cantidad: 1,
              url: "growler.jpg",
         },
 
          {
              nombre: "CORONA PORRON",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "conoraPorron.jpg",
         },
 
           {
              nombre: "PATAGONIA KUNE LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "patagoniaKuneLata.jpg",
         },
 
           {
              nombre: "PATAGONIA BOHEMIAN PILSENER LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "bohemianLata.jpg",
         },
 
           {
              nombre: "PATAGONIA WEISSE LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "weisseLata.jpg",
         },
 
           {
              nombre: "STELLA ARTOIS LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "stellaLata.jpg",
         },
 
           {
              nombre: "STELLA ARTOIS NOIRE LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "noireLata.jpg",
         },
 
           {
              nombre: "ANDES ORIGEN RUBIA LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "andesRubia.jpg",
         },
 
           {
              nombre: "ANDES ORIGEN IPA LATA",
 
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "ipaLata.jpg",
         },
 
           {
              nombre: "ANDES ORIGEN NEGRA LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "andesNegra.jpg",
         },
 
           {
              nombre: "GOOSE ISLAND IPA LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "gooseLata.jpg",
         },
 
           {
              nombre: "TEMPLE SCOTISH LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "scotishLata.jpg",
         },
 
           {
              nombre: "TEMPLE WOLF LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "wolfLata.jpg",
         },
 
           {
              nombre: "TEMPLE COSMICA LATA",
-             precio: "0$",
+             precio: "350$",
              valor: 350,
-             cantidad: 0,
+             cantidad: 1,
              url: "cosmicaLata.jpg",
         },
 
@@ -268,7 +268,7 @@ export default {
     },
 
     restar(cerveza) {
-      if (cerveza.cantidad === 0) {
+      if (cerveza.cantidad === 1) {
         return
       }
       const precio = parseInt(cerveza.precio.slice(0, -1))

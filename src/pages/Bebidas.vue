@@ -69,8 +69,8 @@ export default {
             bebidas: [
                 {
                     nombre: "AGUA NATURAL",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "150$",
+                    cantidad: 1,
                     valor: 150,
                     url: "agua.jpg",
                     
@@ -79,32 +79,32 @@ export default {
 
                  {
                     nombre: "AGUA CON GAS",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "150$",
+                    cantidad: 1,
                     valor: 150,
                     url: "aguaGas.jpg",
                 },
 
                  {
                     nombre: "GASEOSA LINEA PEPSI",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "180$",
+                    cantidad: 1,
                     valor: 180,
                     url: "pepsi.jpg",
                 },
 
                  {
                     nombre: "LATA LINEA PEPSI",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "150$",
+                    cantidad: 1,
                     valor: 150,
                     url: "pepsiLata.jpg",
                 },
 
                  {
                     nombre: "AGUAS SABORIZADAS",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "160$",
+                    cantidad: 1,
                     valor: 160,
                     url: "saborizada.jpg",
 
@@ -113,8 +113,8 @@ export default {
                  {
                     nombre: "EXPRIMIDO",
                     ingredientes: "LIMON, MENTA Y SYRUP DE JENGIBRE",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "450$",
+                    cantidad: 1,
                     valor: 450,
                     url: "exprimido.jpg",
 
@@ -123,8 +123,8 @@ export default {
                 {
                     nombre: "EXPRIMIDO",
                     ingredientes: "NARANJA, MANGO Y AZUCAR",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "450$",
+                    cantidad: 1,
                     valor: 450,
                     url: "naranja.jpg",
 
@@ -133,8 +133,8 @@ export default {
                 {
                     nombre: "EXPRIMIDO",
                     ingredientes: "NARANJA, PI;A Y AZUCAR",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "450$",
+                    cantidad: 1,
                     valor: 450,
                     url: "anana.jpg",
 
@@ -143,8 +143,8 @@ export default {
                 {
                     nombre: "EXPRIMIDO",
                     ingredientes: "LIMON, MARACUYA Y AZUCAR",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "450$",
+                    cantidad: 1,
                     valor: 450,
                     url: "maracuya.jpg",
 
@@ -153,8 +153,8 @@ export default {
                 {
                     nombre: "EXPRIMIDO",
                     ingredientes: "NARANJA, DURAZNO Y AZUCAR",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "450$",
+                    cantidad: 1,
                     valor: 450,
                     url: "naranja.jpg",
 
@@ -163,8 +163,8 @@ export default {
                 {
                     nombre: "EXPRIMIDO",
                     ingredientes: "FRUTILLA, LIMON Y AZUCAR",
-                    precio: "0$",
-                    cantidad: 0,
+                    precio: "450$",
+                    cantidad: 1,
                     valor: 450,
                     url: "frutilla.jpg",
 
@@ -182,7 +182,7 @@ export default {
         },
 
         decreaseQuantity(bebida) {
-            if (bebida.cantidad === 0) {
+            if (bebida.cantidad === 1) {
                 return
             }
             const duplicar = parseInt(bebida.precio.slice(0, -1))
