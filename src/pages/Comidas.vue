@@ -180,7 +180,7 @@ export default {
          {
           nombre: "SANDWICH VEGGIE",
           ingredientes: ["BERENJENA A LA PLANCHA, TOMATES SECOS, QUESO PARMESANO", "EN HEBRAS, RUCULA, ADEREZADO CON MAYOVEGAN"],
-          precio: "730$",
+          precio: "730$", 
           valor: 730,
           cantidad: 1,
           url: "",

@@ -18,7 +18,7 @@ export default new Vuex.Store({
 
             const valorGuardado = JSON.parse(localStorage.getItem('Carrito'))
 
-            if (valorGuardado && valorGuardado.length > 1) {
+            if (valorGuardado && valorGuardado.length > 0) {
 
                 localStorage.setItem('Carrito', JSON.stringify([...valorGuardado, nuevaComida]))
             } else {
@@ -30,16 +30,13 @@ export default new Vuex.Store({
             state.comidas = storedFood
         },
 
-        DELETE_COMIDA(state, deleteFood) {
-            state.comidas = deleteFood
+        DELETE_COMIDA(state, pedidoAEliminar) {
+            if (state.comidas.length === 0) return
+            const pedidos = state.comidas
+            const indexDePedidoEnPedidos = pedidos.indexOf(pedidoAEliminar)
+            state.comidas.splice(indexDePedidoEnPedidos, 1)
 
-            const valor = JSON.parse(localStorage.getItem('Carrito'))
-
-            if (valor && valor.length < 1) {
-                localStorage.removeItem('Carrito', JSON.stringify([...valor, deleteFood]))
-            } else {
-                localStorage.removeItem('Carrito', JSON.stringify([...state.comidas]))
-            }
+            localStorage.setItem('Carrito', JSON.stringify([...state.comidas]))
         }
 
     },
@@ -53,8 +50,8 @@ export default new Vuex.Store({
             context.commit('SET_COMIDA_STORAGE', storedFood)
         },
 
-        deleteComidaAction(context, deleteFood) {
-            context.commit('DELETE_COMIDA', deleteFood)
+        deleteComidaAction(context, pedidoAEliminar) {
+            context.commit('DELETE_COMIDA', pedidoAEliminar)
         }
     },
 })
