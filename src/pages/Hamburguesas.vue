@@ -1,9 +1,9 @@
 <template>
-  <div class="d-flex flex-column align-center px-5  grey " >
+  <div class="d-flex flex-column align-center px-5" >
     <v-card
       
       max-width="850"
-      class="orange accent-3 my-4 pa-4 rounded-br-xl" 
+      class="orange darken-2 my-4 pa-4 rounded-br-xl" 
       :class="{'d-flex': $vuetify.breakpoint.smAndUp}"
       elevation="4"
       v-for="(item, index) in hamburguesas"

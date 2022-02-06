@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-carousel
+    <v-carousel 
       height="700"
       class="slider px-5 my-16 d-flex flex-column align-center"
       hide-delimiters
@@ -14,7 +14,7 @@
       v-for="(texto, index) in text"
       :key="index"
       max-width="100%"
-      class="grey d-flex my-4 pa-4 rounded-br-xl"
+      class="black d-flex my-4 pa-4 rounded-br-xl white--text"
     >
       <v-img max-height="500" max-width="700" contain :src="texto.url"></v-img>
       <div class="pa-12 display-1">
@@ -60,11 +60,13 @@ export default {
           url: "./slider/burgerPresentacion.jpg",
         },
       ],
+
     };
   },
 };
 </script>
 
 <style scoped>
+
 
 </style>

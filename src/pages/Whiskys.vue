@@ -1,11 +1,11 @@
 <template>
-  <div class="d-flex flex-column align-center px-5 grey">
+  <div class="d-flex flex-column align-center px-5">
     <div class="text-center my-5">
       <v-btn
         to="/Bebidas"
         class="ml-2"
         rounded
-        color="orange accent-3 black--text"
+        color="orange darken-2 black--text"
         dark
         >BEBIDAS SIN ALCOHOL</v-btn
       >
@@ -13,7 +13,7 @@
         to="/Tragos"
         class="ml-2 my-2"
         rounded
-        color="orange accent-3 black--text"
+        color="orange darken-2 black--text"
         dark
         >TRAGOS</v-btn
       >
@@ -21,7 +21,7 @@
         to="/Cervezas"
         class="ml-2"
         rounded
-        color="orange accent-3 black--text"
+        color="orange darken-2 black--text"
         dark
         >CERVEZAS</v-btn
       >
@@ -29,7 +29,7 @@
         to="/Whiskys"
         class="ml-2 my-2"
         rounded
-        color="orange accent-3 black--text"
+        color="orange darken-2 black--text"
         dark
         >WHISKYS Y ESPUMANTES</v-btn
       >
@@ -38,14 +38,14 @@
     <div class="px-5">
       <v-card
         max-width="850"
-        class="orange accent-3 my-4 pa-4 rounded-br-xl"
+        class="orange darken-2 my-4 pa-4 rounded-br-xl"
         :class="{ 'd-flex': $vuetify.breakpoint.smAndUp }"
         elevation="4"
         v-for="(whisky, index) in whiskys"
         :key="index"
       >
 
-                <v-img class="mr-5" :src="whisky.url" max-height="200" max-width="200" contain></v-img>
+         <v-img class="mr-5" :src="whisky.url" max-height="200" max-width="200" contain></v-img>
 
         <div>
           <div class="font-weight-black display-1">{{ whisky.nombre }}</div>

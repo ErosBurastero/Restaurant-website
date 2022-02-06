@@ -2,7 +2,7 @@
   <v-card>
     <v-tabs
       v-model="tab"
-      background-color="orange accent-3"
+      background-color="orange darken-2"
       centered
       dark
       icons-and-text

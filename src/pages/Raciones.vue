@@ -1,14 +1,14 @@
 <template>
-  <div  class="d-flex flex-column align-center px-5 grey">
+  <div  class="d-flex flex-column align-center px-5">
       <div class="text-center my-5">
-    <v-btn  to="/Comidas" rounded  color="orange accent-3 black--text"  dark >COMIDAS</v-btn>
-    <v-btn  to="/Raciones" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >RACIONES</v-btn>
+    <v-btn  to="/Comidas" rounded  color="orange darken-2 black--text"  dark >COMIDAS</v-btn>
+    <v-btn  to="/Raciones" class="ml-2"  rounded  color="orange darken-2 black--text"  dark >RACIONES</v-btn>
 
   </div>
 
   <div class="px-5 ">
       <v-card  max-width="850"
-      class="orange accent-3 my-4 pa-4 rounded-br-xl" 
+      class="orange darken-2 my-4 pa-4 rounded-br-xl" 
       :class="{'d-flex': $vuetify.breakpoint.smAndUp}"
       elevation="4"
       v-for="(racion, index) in raciones"

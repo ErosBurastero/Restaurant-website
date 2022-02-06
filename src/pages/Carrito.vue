@@ -1,9 +1,9 @@
 <template>
-  <div class="d-flex flex-column align-center px-5 grey">
+  <div class="d-flex flex-column align-center px-5">
     <v-card
       max-width="850"
       min-width="386"
-      class="card orange accent-3 my-4 pa-4 rounded-br-xl"
+      class="card orange darken-2 my-4 pa-4 rounded-br-xl"
     >
       <ul
         class="my-4"

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app >
     <v-app-bar :class="{'d-flex justify-center': $vuetify.breakpoint.smAndUp}"
       app
       color="black"
@@ -11,7 +11,7 @@
     </v-app-bar>
 
  
-    <v-main>
+    <v-main class="brown darken-3">
       <router-view />
     </v-main>
     
