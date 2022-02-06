@@ -20,7 +20,7 @@
         </li>
       </ul>
       <div class="my-2 ml-3 font-weight-bold">
-        {{ total + sumarComida }}
+        {{ total + sumarComida + "$" }}
       </div>
       <v-btn class="my-2" rounded color="black" dark @click="enviarWhatsapp()"
         >ENVIAR PEDIDO</v-btn
@@ -48,19 +48,26 @@ export default {
   computed: {
     sumarComida() {
       const pedidos = this.$store.state.comidas;
-      if(pedidos.length === 0) return "NO HAY PRODUCTOS EN EL CARRITO "
+      if(pedidos.length === 0) return "0"
+     
+       
       if(pedidos.length > 1){
         const sumaPedidos = pedidos.reduce((pedidoAnterior, pedido) => {
           const pedidoActualTotal = pedido.valor * pedido.cantidad
+
+         
           if (pedidoAnterior.valor) {
             const pedidoAnteriorTotal = pedidoAnterior.valor * pedidoAnterior.cantidad
             return pedidoActualTotal + pedidoAnteriorTotal;
           } 
           return pedidoActualTotal + pedidoAnterior;
-        });
-        return sumaPedidos
+        }
+        );
+        return sumaPedidos 
       }
-      return pedidos[0].valor
+      const unicoPedido = pedidos[0]
+      const unicoPedidoTotal = unicoPedido.valor * unicoPedido.cantidad
+      return unicoPedidoTotal
     }
   },
   methods: {

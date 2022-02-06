@@ -8,27 +8,27 @@
       icons-and-text
     >
       <v-tabs-slider></v-tabs-slider>
-        <v-tab class="black--text" href="/">
+        <v-tab class="black--text" to="/">
         Inicio
         <v-icon>mdi-home</v-icon>
       </v-tab>
 
-      <v-tab class="black--text" href="/Hamburguesas">
+      <v-tab class="black--text" to="/Hamburguesas">
         Hamburguesas
         <v-icon>mdi-hamburger</v-icon>
       </v-tab>
 
-       <v-tab class="black--text" href="/Comidas">
+       <v-tab class="black--text" to="/Comidas">
         Comidas
         <v-icon>mdi-food-turkey</v-icon>
       </v-tab>
 
-      <v-tab class="black--text" href="/Bebidas">
+      <v-tab class="black--text" to="/Bebidas">
         Bebidas
         <v-icon>mdi-cup</v-icon>
       </v-tab>
 
-       <v-tab class="black--text" href="/Carrito">
+       <v-tab class="black--text" to="/Carrito">
         Carrito
         <v-icon>mdi-cart-variant</v-icon>
       </v-tab>

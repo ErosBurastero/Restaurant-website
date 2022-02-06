@@ -1,10 +1,10 @@
 <template>
 <div  class="d-flex flex-column align-center px-5 grey ">
     <div class="text-center my-5">
-          <v-btn  href="/Bebidas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >BEBIDAS SIN ALCOHOL</v-btn>
-          <v-btn  href="/Tragos" class="ml-2 my-2"  rounded  color="orange accent-3 black--text"  dark >TRAGOS</v-btn>
-          <v-btn  href="/Cervezas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >CERVEZAS</v-btn>
-          <v-btn  href="/Whiskys" class="ml-2 my-2"  rounded  color="orange accent-3 black--text"  dark >WHISKYS Y ESPUMANTES</v-btn>
+          <v-btn  to="/Bebidas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >BEBIDAS SIN ALCOHOL</v-btn>
+          <v-btn  to="/Tragos" class="ml-2 my-2"  rounded  color="orange accent-3 black--text"  dark >TRAGOS</v-btn>
+          <v-btn  to="/Cervezas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >CERVEZAS</v-btn>
+          <v-btn  to="/Whiskys" class="ml-2 my-2"  rounded  color="orange accent-3 black--text"  dark >WHISKYS Y ESPUMANTES</v-btn>
 
 
   </div>
@@ -72,7 +72,7 @@ export default {
                     precio: "150$",
                     cantidad: 1,
                     valor: 150,
-                    url: "agua.jpg",
+                    url: "./bebidas/agua.jpg",
                     
 
                 },
@@ -82,7 +82,7 @@ export default {
                     precio: "150$",
                     cantidad: 1,
                     valor: 150,
-                    url: "aguaGas.jpg",
+                    url: "./bebidas/aguaGas.jpg",
                 },
 
                  {
@@ -90,7 +90,7 @@ export default {
                     precio: "180$",
                     cantidad: 1,
                     valor: 180,
-                    url: "pepsi.jpg",
+                    url: "./bebidas/pepsi.jpg",
                 },
 
                  {
@@ -98,7 +98,7 @@ export default {
                     precio: "150$",
                     cantidad: 1,
                     valor: 150,
-                    url: "pepsiLata.jpg",
+                    url: "./bebidas/pepsiLata.jpg",
                 },
 
                  {
@@ -106,7 +106,7 @@ export default {
                     precio: "160$",
                     cantidad: 1,
                     valor: 160,
-                    url: "saborizada.jpg",
+                    url: "./bebidas/saborizada.jpg",
 
                 },
 
@@ -116,7 +116,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "exprimido.jpg",
+                    url: "./bebidas/exprimido.jpg",
 
                 },
 
@@ -126,7 +126,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "naranja.jpg",
+                    url: "./bebidas/naranja.jpg",
 
                 },
 
@@ -136,7 +136,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "anana.jpg",
+                    url: "./bebidas/anana.jpg",
 
                 },
 
@@ -146,7 +146,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "maracuya.jpg",
+                    url: "./bebidas/maracuya.jpg",
 
                 },
 
@@ -156,7 +156,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "naranja.jpg",
+                    url: "./bebidas/naranja.jpg",
 
                 },
 
@@ -166,7 +166,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "frutilla.jpg",
+                    url: "./bebidas/frutilla.jpg",
 
                 },
             ]

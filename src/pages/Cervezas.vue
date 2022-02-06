@@ -1,10 +1,10 @@
 <template>
   <div  class="d-flex flex-column align-center px-5 grey ">
        <div class="text-center my-5">
-          <v-btn  href="/Bebidas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >BEBIDAS SIN ALCOHOL</v-btn>
-          <v-btn  href="/Tragos" class="ml-2 my-2"  rounded  color="orange accent-3 black--text"  dark >TRAGOS</v-btn>
-          <v-btn  href="/Cervezas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >CERVEZAS</v-btn>        
-          <v-btn  href="/Whiskys" class="ml-2 my-2"  rounded  color="orange accent-3 black--text"  dark >WHISKYS Y ESPUMANTES</v-btn>
+          <v-btn  to="/Bebidas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >BEBIDAS SIN ALCOHOL</v-btn>
+          <v-btn  to="/Tragos" class="ml-2 my-2"  rounded  color="orange accent-3 black--text"  dark >TRAGOS</v-btn>
+          <v-btn  to="/Cervezas" class="ml-2"  rounded  color="orange accent-3 black--text"  dark >CERVEZAS</v-btn>        
+          <v-btn  to="/Whiskys" class="ml-2 my-2"  rounded  color="orange accent-3 black--text"  dark >WHISKYS Y ESPUMANTES</v-btn>
        </div>
 
     <div class="px-5 ">
@@ -51,7 +51,7 @@ export default {
              precio: "550$",
              valor: 550,
              cantidad: 1,
-             url: "patagoniaPilsener.jpg",
+             url: "./bebidas/patagoniaPilsener.jpg",
         },
          {
              nombre: "PATAGONIA HOPPER LAGER",
@@ -59,7 +59,7 @@ export default {
              precio: "550$",
              valor: 550,
              cantidad: 1,
-             url: "patagoniaLager.jpg",
+             url: "./bebidas/patagoniaLager.jpg",
         },
 
          {
@@ -68,7 +68,7 @@ export default {
              precio: "550$",
              valor: 550,
              cantidad: 1,
-             url: "veraGrande.jpg",
+             url: "./bebidas/veraGrande.jpg",
         },
 
          {
@@ -77,7 +77,7 @@ export default {
              precio: "550$",
              valor: 550,
              cantidad: 1,
-             url: "patagoniaKune.jpg",
+             url: "./bebidas/patagoniaKune.jpg",
         },
 
          {
@@ -86,7 +86,7 @@ export default {
              precio: "550$",
              valor: 550,
              cantidad: 1,
-             url: "patagoniaWeisse.jpg",
+             url: "./bebidas/patagoniaWeisse.jpg",
         },
 
          {
@@ -95,7 +95,7 @@ export default {
              precio: "550$",
              valor: 550,
              cantidad: 1,
-             url: "stellaArtois.jpg",
+             url: "./bebidas/stellaArtois.jpg",
         },
 
          {
@@ -104,7 +104,7 @@ export default {
              precio: "500$",
              valor: 500,
              cantidad: 1,
-             url: "heineken.jpg",
+             url: "./bebidas/heineken.jpg",
         },
 
          {
@@ -113,7 +113,7 @@ export default {
              precio: "500$",
              valor: 500,
              cantidad: 1,
-             url: "corona.jpg",
+             url: "./bebidas/corona.jpg",
         },
 
         {
@@ -121,7 +121,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "pinta.jpg",
+             url: "./bebidas/pinta.jpg",
         },
 
         {
@@ -130,7 +130,7 @@ export default {
              precio: "650$",
              valor: 650,
              cantidad: 1,
-             url: "pinta.jpg",
+             url: "./bebidas/pinta.jpg",
         },
 
         {
@@ -139,7 +139,7 @@ export default {
              precio: "1200$",
              valor: 1200,
              cantidad: 1,
-             url: "pinta.jpg",
+             url: "./bebidas/pinta.jpg",
         },
 
         {
@@ -147,7 +147,7 @@ export default {
              precio: "650$",
              valor: 650,
              cantidad: 1,
-             url: "growler.jpg",
+             url: "./bebidas/growler.jpg",
         },
 
          {
@@ -155,7 +155,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "conoraPorron.jpg",
+             url: "./bebidas/conoraPorron.jpg",
         },
 
           {
@@ -163,7 +163,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "patagoniaKuneLata.jpg",
+             url: "./bebidas/patagoniaKuneLata.jpg",
         },
 
           {
@@ -171,7 +171,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "bohemianLata.jpg",
+             url: "./bebidas/bohemianLata.jpg",
         },
 
           {
@@ -179,7 +179,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "weisseLata.jpg",
+             url: "./bebidas/weisseLata.jpg",
         },
 
           {
@@ -187,7 +187,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "stellaLata.jpg",
+             url: "./bebidas/stellaLata.jpg",
         },
 
           {
@@ -195,7 +195,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "noireLata.jpg",
+             url: "./bebidas/noireLata.jpg",
         },
 
           {
@@ -203,7 +203,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "andesRubia.jpg",
+             url: "./bebidas/andesRubia.jpg",
         },
 
           {
@@ -212,7 +212,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "ipaLata.jpg",
+             url: "./bebidas/ipaLata.jpg",
         },
 
           {
@@ -220,7 +220,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "andesNegra.jpg",
+             url: "./bebidas/andesNegra.jpg",
         },
 
           {
@@ -228,7 +228,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "gooseLata.jpg",
+             url: "./bebidas/gooseLata.jpg",
         },
 
           {
@@ -236,7 +236,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "scotishLata.jpg",
+             url: "./bebidas/scotishLata.jpg",
         },
 
           {
@@ -244,7 +244,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "wolfLata.jpg",
+             url: "./bebidas/wolfLata.jpg",
         },
 
           {
@@ -252,7 +252,7 @@ export default {
              precio: "350$",
              valor: 350,
              cantidad: 1,
-             url: "cosmicaLata.jpg",
+             url: "./bebidas/cosmicaLata.jpg",
         },
 
       ]
