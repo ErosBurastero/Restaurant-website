@@ -1,9 +1,6 @@
 <template>
   <div class="d-flex flex-column align-center px-5">
 
-    
- 
-
    <v-card
       max-width="850"
       min-width="386"

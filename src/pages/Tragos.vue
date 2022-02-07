@@ -12,7 +12,7 @@
   
   <div class="px-5 ">
     
-      <v-card  max-width="850" class="orange darken-2 my-4 pa-4 rounded-br-xl "  elevation="5" v-for="items in tragos" :key="items">
+      <v-card  max-width="850" class="orange darken-2 my-4 pa-4 rounded-br-xl "  elevation="5" v-for="(items, index) in tragos" :key="index">
 
       <div class="font-weight-black display-1"> {{ items.nombre }} </div>
 

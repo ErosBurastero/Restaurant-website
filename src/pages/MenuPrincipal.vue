@@ -4,21 +4,24 @@
       height="700"
       class="slider px-5 my-16 d-flex flex-column align-center"
       hide-delimiters
+       min-height="300" min-width="370"
     >
       <v-carousel-item v-for="(item, i) in items" :key="i">
-        <v-img :src="item.src" max-height="700" contain></v-img>
+        <v-img :src="item.src" max-height="700"   contain></v-img>
       </v-carousel-item>
     </v-carousel>
 
     <v-card
       v-for="(texto, index) in text"
       :key="index"
-      max-width="100%"
-      class="black d-flex my-4 pa-4 rounded-br-xl white--text"
-    >
-      <v-img max-height="500" max-width="700" contain :src="texto.url"></v-img>
-      <div class="pa-12 display-1">
-        <div class="my-2 font-italic">{{ texto.frase }}</div>
+      min-height="300" min-width="370"
+     
+      class="black d-flex my-4 pa-4 rounded-br-xl white--text">
+    
+      <v-img max-height="500" contain :src="texto.url"></v-img>
+      <div class="pa-12 display-1" 
+      :class="{'d-flex': $vuetify.breakpoint.smAndDown}">
+        <div class="my-2 font-italic d-flex justify-center">{{ texto.frase }}</div>
         <div class="my-2 font-italic">{{ texto.frase1 }}</div>
         <div class="my-2 font-italic">{{ texto.frase2 }}</div>
         <div class="my-2 font-italic">{{ texto.frase3 }}</div>
@@ -61,8 +64,15 @@ export default {
         },
       ],
 
+
     };
+
+    
   },
+
+    mounted () {
+    console.log(this)
+  }
 };
 </script>
 

@@ -10,11 +10,11 @@
   </div>
 
     <div class="px-5">
-      <v-card  max-width="850"
+      <v-card  max-width="700"
       class="orange darken-2 my-4 pa-4 rounded-br-xl" 
       :class="{'d-flex': $vuetify.breakpoint.smAndUp}"
       elevation="4"
-       v-for="(bebida, index) in bebidas" :key="index" >
+       v-for="(bebida, i) in bebidas" :key="i" >
 
       <v-img class="mr-4" :src="bebida.url" max-height="200" max-width="200" contain></v-img>
 

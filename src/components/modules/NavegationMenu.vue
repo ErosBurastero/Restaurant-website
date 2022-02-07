@@ -1,11 +1,13 @@
 <template>
-  <v-card>
+  <v-card  v-if="ocultarTab < 600"  >
     <v-tabs
       v-model="tab"
       background-color="orange darken-2"
       centered
       dark
       icons-and-text
+     
+     
     >
       <v-tabs-slider></v-tabs-slider>
         <v-tab class="black--text" to="/">
@@ -44,6 +46,9 @@
     data () {
       return {
         tab: null,
+        ocultarTab: false,
+      
+
       }
     },
   }
