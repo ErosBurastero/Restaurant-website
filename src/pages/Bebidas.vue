@@ -111,8 +111,7 @@ export default {
                 },
 
                  {
-                    nombre: "EXPRIMIDO",
-                    ingredientes: "LIMON, MENTA Y SYRUP DE JENGIBRE",
+                    nombre: "EXPRIMIDO DE LIMON, MENTA Y SYRUP DE JENGIBRE",
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
@@ -121,8 +120,7 @@ export default {
                 },
 
                 {
-                    nombre: "EXPRIMIDO",
-                    ingredientes: "NARANJA, MANGO Y AZUCAR",
+                    nombre: "EXPRIMIDO DE NARANJA, MANGO Y AZUCAR",
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
@@ -131,8 +129,7 @@ export default {
                 },
 
                 {
-                    nombre: "EXPRIMIDO",
-                    ingredientes: "NARANJA, PI;A Y AZUCAR",
+                    nombre: "EXPRIMIDO DE NARANJA, ANANA Y AZUCAR",
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
@@ -141,8 +138,7 @@ export default {
                 },
 
                 {
-                    nombre: "EXPRIMIDO",
-                    ingredientes: "LIMON, MARACUYA Y AZUCAR",
+                    nombre: "EXPRIMIDO DE LIMON, MARACUYA Y AZUCAR",
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
@@ -151,8 +147,7 @@ export default {
                 },
 
                 {
-                    nombre: "EXPRIMIDO",
-                    ingredientes: "NARANJA, DURAZNO Y AZUCAR",
+                    nombre: "EXPRIMIDO DE NARANJA, DURAZNO Y AZUCAR",
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
@@ -161,8 +156,7 @@ export default {
                 },
 
                 {
-                    nombre: "EXPRIMIDO",
-                    ingredientes: "FRUTILLA, LIMON Y AZUCAR",
+                    nombre: "EXPRIMIDO DE FRUTILLA, LIMON Y AZUCAR",
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,

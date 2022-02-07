@@ -9,6 +9,7 @@
       min-width="386"
       class="orange darken-2 my-4 pa-4 rounded-br-xl"
     >
+    <div class="font-weight-medium ml-3 text-decoration-underline">PRODUCTOS EN CARRITO : </div>
 
     
     
@@ -26,7 +27,7 @@
             {{ comida.nombre }}
             <v-icon class="ml-3" @click="deletePedido(comida)">mdi-delete</v-icon>
           </div>
-
+        
           <div>{{ "CANTIDAD " + comida.cantidad }}</div>
 
           <div>{{ "PRECIO:" + comida.precio }}</div>
@@ -39,7 +40,7 @@
         {{ total + sumarComida + "$" }}
       </div>
 
-      <v-btn class="my-2" rounded color="black" dark @click="enviarWhatsapp()"
+      <v-btn class="my-2" rounded color="black" dark  href="https://api.whatsapp.com/send?" @click="enviarWhatsapp()"
         >ENVIAR PEDIDO</v-btn
       >
 
@@ -93,6 +94,15 @@ export default {
     deletePedido(pedido) {
       this.$store.dispatch("deleteComidaAction", pedido);
     },
+
+    enviarWhatsapp() {
+    //  const pedidosAEnviar = this.$store.state.comidas
+
+    //  if ( pedidosAEnviar >= 1) {     }
+      
+
+
+    }
 
   },
 };
