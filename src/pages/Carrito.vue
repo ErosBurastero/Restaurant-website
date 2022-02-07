@@ -1,31 +1,50 @@
 <template>
   <div class="d-flex flex-column align-center px-5">
-    <v-card
+
+    
+ 
+
+   <v-card
       max-width="850"
       min-width="386"
-      class="card orange darken-2 my-4 pa-4 rounded-br-xl"
+      class="orange darken-2 my-4 pa-4 rounded-br-xl"
     >
+
+    
+    
       <ul
         class="my-4"
         v-for="(comida, index) in $store.state.comidas"
         :key="index"
+          
       >
-        <li class="font-weight-bold">
+      <v-divider></v-divider>
+
+        <li class="font-weight-bold my-5">
+
           <div>
             {{ comida.nombre }}
             <v-icon class="ml-3" @click="deletePedido(comida)">mdi-delete</v-icon>
           </div>
+
           <div>{{ "CANTIDAD " + comida.cantidad }}</div>
+
           <div>{{ "PRECIO:" + comida.precio }}</div>
+
         </li>
+
       </ul>
+
       <div class="my-2 ml-3 font-weight-bold">
         {{ total + sumarComida + "$" }}
       </div>
+
       <v-btn class="my-2" rounded color="black" dark @click="enviarWhatsapp()"
         >ENVIAR PEDIDO</v-btn
       >
+
     </v-card>
+
   </div>
 </template>
 
@@ -79,4 +98,7 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+
+</style>

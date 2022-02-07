@@ -11,7 +11,7 @@
     </v-app-bar>
 
  
-    <v-main class="brown darken-3">
+    <v-main class="grey lighten-2">
       <router-view />
     </v-main>
     
