@@ -54,6 +54,7 @@
       temporary
       class="my-14 black"
       height="230"
+  
       
     >
       <v-list

@@ -8,6 +8,8 @@
       <v-carousel-item v-for="(item, i) in items" :key="i">
         <v-img
           :src="item.src"
+          min-height="500"
+          min-width="350"
           max-height="700"
           max-width="1000"
           contain
@@ -18,12 +20,14 @@
     <v-card
       v-for="(texto, index) in text"
       :key="index"
-      min-height="300"
-      min-width="370"
-      class="grey darken-4 d-flex my-4 pa-4 rounded-br-xl white--text"
+      min-width="350"
+      class="grey darken-4 my-4 pa-4 rounded-br-xl white--text"
+      :class="{'d-flex': $vuetify.breakpoint.mdAndUp}"
+      elevation="5"
+
        
     >
-      <v-img max-height="500" contain :src="texto.url"></v-img>
+      <v-img max-height="1000" max-width="1050" contain :src="texto.url"></v-img>
       <div class="pa-12 display-1 my-1">
         
         <div class="my-2 font-italic display-1"

@@ -37,7 +37,7 @@
         {{ total + sumarComida + "$" }}
       </div>
 
-      <v-btn class="my-2" rounded color="black" dark  href="https://wa.me/541132154125?text=" target="blank" @click="enviarWhatsapp()"
+      <v-btn class="my-2" rounded color="black" dark  href="https://wa.me/541132154125?text=" target="blank" @click="enviarWhatsapp(comida)"
         >ENVIAR PEDIDO</v-btn
       >
 
@@ -91,6 +91,17 @@ export default {
     deletePedido(pedido) {
       this.$store.dispatch("deleteComidaAction", pedido);
     },
+
+    enviarWhatsapp(comida) {
+      const pedidoAEnviar = this.$store.state.comidas
+      if( pedidoAEnviar && pedidoAEnviar.length === 0) {
+        return pedidoAEnviar + comida;
+      }
+
+      if( pedidoAEnviar >= 1) {
+        return pedidoAEnviar
+      }
+    }
 
   
 
