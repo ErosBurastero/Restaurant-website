@@ -1,30 +1,43 @@
 <template>
   <div>
-    <v-carousel 
-      height="700"
+    <v-carousel
       class="slider px-5 my-16 d-flex flex-column align-center"
       hide-delimiters
-       min-height="300" min-width="370"
+      
     >
       <v-carousel-item v-for="(item, i) in items" :key="i">
-        <v-img :src="item.src" max-height="700"   contain></v-img>
+        <v-img
+          :src="item.src"
+          max-height="700"
+          max-width="1000"
+          contain
+        ></v-img>
       </v-carousel-item>
     </v-carousel>
 
     <v-card
       v-for="(texto, index) in text"
       :key="index"
-      min-height="300" min-width="370"
-     
-      class="black d-flex my-4 pa-4 rounded-br-xl white--text">
-    
+      min-height="300"
+      min-width="370"
+      class="grey darken-4 d-flex my-4 pa-4 rounded-br-xl white--text"
+       
+    >
       <v-img max-height="500" contain :src="texto.url"></v-img>
-      <div class="pa-12 display-1" 
-      :class="{'d-flex': $vuetify.breakpoint.smAndDown}">
-        <div class="my-2 font-italic d-flex justify-center">{{ texto.frase }}</div>
-        <div class="my-2 font-italic">{{ texto.frase1 }}</div>
-        <div class="my-2 font-italic">{{ texto.frase2 }}</div>
-        <div class="my-2 font-italic">{{ texto.frase3 }}</div>
+      <div class="pa-12 display-1 my-1">
+        
+        <div class="my-2 font-italic display-1"
+        >{{ texto.frase }}</div>
+
+        <div class="my-2 font-italic d-flex justify-center my-8">
+          {{ texto.frase1 }}
+        </div>
+        <div class="my-2 font-italic d-flex justify-center">
+          {{ texto.frase2 }}
+        </div>
+        <div class="my-2 font-italic d-flex justify-center">
+          {{ texto.frase3 }}
+        </div>
       </div>
     </v-card>
   </div>
@@ -51,32 +64,21 @@ export default {
 
       text: [
         {
-          frase:
-            "Deliciosas y jugosas son las hamburguesas de nuestro menú, su sabor guarda los secretos de la cocina familiar.",
-          frase1:
-            "Con el primer bocado ya te sentirás en el cielo, será una experiencia del otro mundo.",
-          frase2:
-            "Si quieres comer balanceado, no dejes de probar nuestras hamburguesas: proteínas, carbohidrato, grasas y vegetales, en cada bocado.",
-          frase3:
-            "Ven y siéntate en nuestra mesa, te preparamos las mejores burgers de la ciudad. Nuestras hamburguesas serán las nuevas consentidas de tu paladar.",
+          frase: "DISFRUTA DE NUESTRO HAPPY HOUR CON LAS MEJORES CERVEZAS ",
+          frase1: "HORARIOS DE LUNES A JUEVES",
+          frase2: "18:00hs hasta las 20:00hs",
+          frase3: "",
 
-          url: "./slider/burgerPresentacion.jpg",
+          url: "./tragos/happy.jpg",
         },
       ],
-
-
     };
-
-    
   },
 
-    mounted () {
-    console.log(this)
-  }
+  mounted() {
+    console.log(this);
+  },
 };
 </script>
 
-<style scoped>
-
-
-</style>
+<style scoped></style>

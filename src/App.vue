@@ -6,6 +6,7 @@
       dark
     >
       <NavegationMenu />
+
      
   
     </v-app-bar>
@@ -34,6 +35,7 @@ export default {
   
     NavegationMenu ,
     Footer,
+    
   
     
     

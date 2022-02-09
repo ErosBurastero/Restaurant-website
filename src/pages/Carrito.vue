@@ -37,7 +37,7 @@
         {{ total + sumarComida + "$" }}
       </div>
 
-      <v-btn class="my-2" rounded color="black" dark  href="https://api.whatsapp.com/send?" @click="enviarWhatsapp()"
+      <v-btn class="my-2" rounded color="black" dark  href="https://wa.me/541132154125?text=" target="blank" @click="enviarWhatsapp()"
         >ENVIAR PEDIDO</v-btn
       >
 
@@ -92,14 +92,7 @@ export default {
       this.$store.dispatch("deleteComidaAction", pedido);
     },
 
-    enviarWhatsapp() {
-    //  const pedidosAEnviar = this.$store.state.comidas
-
-    //  if ( pedidosAEnviar >= 1) {     }
-      
-
-
-    }
+  
 
   },
 };

@@ -33,7 +33,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        <strong> 2021 </strong> — <strong>THE GANGSTER HAMBURG — LA TABLADA, ALVEAR 4011  — RESERVAS AL 11-3215-4125  <a href="https://wa.me/541132154125?text=Hola%20quisiera%20hacer%20una%20reserva..." target="blank"><v-icon>mdi-whatsapp</v-icon></a></strong>
+        <strong> 2021 </strong> — <strong>THE GANGSTER HAMBURG — LA TABLADA, ALVEAR 4011  — RESERVAS O CONSULTAS AL 11-3215-4125  <a href="https://wa.me/541132154125?text=Hola%20quisiera%20hacer%20una%20reserva..." target="blank"><v-icon>mdi-whatsapp</v-icon></a></strong>
       </v-card-text>
     </v-card>
   </v-footer>
