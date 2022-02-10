@@ -1,9 +1,12 @@
 <template>
   <div>
     <v-carousel
-      class="slider px-5 my-16 d-flex flex-column align-center"
+      class="my-10 d-flex flex-column align-center"
       hide-delimiters
+      v-if="$vuetify.breakpoint.smAndUp"
+
       
+
     >
       <v-carousel-item v-for="(item, i) in items" :key="i">
         <v-img
@@ -11,7 +14,7 @@
           min-height="500"
           min-width="350"
           max-height="700"
-          max-width="1000"
+          max-width="1000"  
           contain
         ></v-img>
       </v-carousel-item>
@@ -21,7 +24,7 @@
       v-for="(texto, index) in text"
       :key="index"
       min-width="350"
-      class="grey darken-4 my-4 pa-4 rounded-br-xl white--text"
+      class="grey darken-4 pa-4 my-5 rounded-br-xl white--text"
       :class="{'d-flex': $vuetify.breakpoint.mdAndUp}"
       elevation="5"
 
