@@ -71,6 +71,12 @@ const routes = [
             import ('./pages/Carrito.vue')
     },
 
+    {
+        path: '/Extras',
+        component: () =>
+            import ('./pages/Extras.vue')
+    },
+
 ]
 
 const router = new VueRouter({

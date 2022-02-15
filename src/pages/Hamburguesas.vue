@@ -1,5 +1,12 @@
 <template>
   <div class="d-flex flex-column align-center px-5" >
+     <div class="text-center my-5">
+          <v-btn  to="/Hamburguesas" class="ml-2"  rounded  color="orange darken-2 black--text"  dark >HAMBURGUESAS</v-btn>
+          <v-btn  to="/Extras" class="ml-2 my-2"  rounded  color="orange darken-2 black--text"  dark >EXTRAS</v-btn>
+        
+
+
+       </div>
     <v-card
       
       max-width="850"
@@ -20,7 +27,7 @@
           {{ ingrediente }}
         </div>
 
-        <div class="font-weight-medium">{{ item.precio }}</div>
+        <div>{{ item.precio }}</div>
 
         <div class="font-weight-medium">{{ item.cantidad }}</div>
         <v-btn
