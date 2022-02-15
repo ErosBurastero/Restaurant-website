@@ -12,7 +12,7 @@
     </v-app-bar>
 
  
-    <v-main class="grey lighten-2">
+    <v-main>
       <router-view />
     </v-main>
     
@@ -48,6 +48,10 @@ export default {
 
 };
 </script>
+
+<style scoped>
+ 
+</style>
 
 
 

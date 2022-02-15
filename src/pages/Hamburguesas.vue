@@ -17,7 +17,7 @@
       :key="index"
     >
 
-    <v-img class="ml-" :src="item.url" max-height="200" max-width="200" contain></v-img>
+    <v-img  :src="item.url" max-height="400" max-width="350" contain></v-img>
 
       <div class="pl-4 ">
         <div class="font-weight-black display-1">{{ item.nombre }}</div>
@@ -65,7 +65,7 @@ export default {
     return {
       hamburguesas: [
         {
-          nombre: "CHESSEBURGER GANGS",
+          nombre: "CHEESEBURGER GANGS",
           caracteristicas: "SIN TACC",
           ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR), QUESO CHEDDAR",
@@ -74,7 +74,8 @@ export default {
           precio: "720$",
           valor: 720,
           cantidad: 1,
-          url: "burger.jpg",
+          url: "/burgers/cheese.jpg",
+          
         },
         {
           nombre: "1/4 GANGS",
@@ -86,8 +87,24 @@ export default {
           precio: "660$",
           valor: 660,
           cantidad: 1,
+          url: "/burgers/unCuarto.jpg",
           
         },
+
+        {
+          nombre: "AMERICAN GANGSTER",
+          ingredientes: [
+            "DOBLE MEDALLON DE CARNE (90GR), QUESO CHEDDAR,",
+            "PANCETA CROCANTE, CEBOLLA CARAMELIZADA Y SALSA BARBACOA EN PAN BRIOCHE",
+          ],
+          precio: "750$",
+          valor: 750,
+          cantidad: 1,
+          url: "/burgers/american.jpg",
+          
+        },
+
+
         {
           nombre: "GIUSSEPE GARIBALDI",
           ingredientes: [
@@ -98,7 +115,7 @@ export default {
           precio: "850$",
           valor: 850,
           cantidad: 1,
-          
+          url: "/burgers/garibaldi.jpg",
         },
         {
           nombre: "LUCKY LUCIANO",
@@ -110,6 +127,7 @@ export default {
           precio: "760$",
           valor: 760,
           cantidad: 1,
+          url: "/burgers/luckyLuciano.jpg",
         },
         {
           nombre: "MAFIA MEXICANA",
@@ -121,6 +139,7 @@ export default {
           precio: "930$",
           valor: 930,
           cantidad: 1,
+          url: "/burgers/mexicana.jpg",
         },
         {
           nombre: "BIG BANGS",
@@ -132,6 +151,7 @@ export default {
           precio: "720$",
           valor: 720,
           cantidad: 1,
+          url: "/burgers/bigBangs.jpg",
         },
         {
           nombre: "CAESAR GANGS",
@@ -142,6 +162,7 @@ export default {
           precio: "790$",
           valor: 790,
           cantidad: 1,
+          url: "/burgers/caesar.jpg",
         },
         {
           nombre: "JHON GOTTY",
@@ -151,8 +172,9 @@ export default {
             "ADEREZADA CON SALSA GANGS",
           ],
           precio: "770$",
-          calor: 770,
+          valor: 770,
           cantidad: 1,
+          url: "/burgers/john.jpg",
         },
 
         {
@@ -181,6 +203,7 @@ export default {
           precio: "720$",
           valor: 720,
           cantidad: 1,
+          url: "/burgers/barker.jpg",
         },
         {
           nombre: "NOT BURGER",

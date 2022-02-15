@@ -18,9 +18,9 @@
       v-for="(item, index) in comidas"
       :key="index"
       >
-    
+          <v-img class="" :src="item.url" max-height="300" max-width="300" contain></v-img>
 
-      <div>
+      <div class="pl-4">
 
           <div class="font-weight-black display-1"> {{ item.nombre }} </div>
 
@@ -73,7 +73,7 @@ export default {
           precio: "1800$",
           valor: 1800,
           cantidad: 1,
-          url: "",
+          url: "/comidas/langostinos.jpg",
 
         },
 
@@ -83,7 +83,7 @@ export default {
           precio: "1500$",
           valor: 1500,
           cantidad: 1,
-          url: "",
+          url: "/comidas/rabas.jpg",
 
         },
 
@@ -93,7 +93,7 @@ export default {
           precio: "950$",
           valor: 950,
           cantidad: 1,
-          url: "",
+          url: "/comidas/ribbs.jpg",
 
         },
 
@@ -103,7 +103,7 @@ export default {
           precio: "600$",
           valor: 600,
           cantidad: 1,
-          url: "",
+          url: "/comidas/bruVeggie.jpg",
 
         },
 
@@ -113,7 +113,7 @@ export default {
           precio: "600$",
           valor: 600,
           cantidad: 1,
-          url: "",
+          url: "/comidas/iberica.jpg",
 
         },
 
@@ -123,7 +123,7 @@ export default {
           precio: "600$",
           valor: 600,
           cantidad: 1,
-          url: "",
+          url: "/comidas/burritos.jpg",
 
         },
 
@@ -133,7 +133,7 @@ export default {
           precio: "1500$",
           valor: 1500,
           cantidad: 1,
-          url: "",
+          url: "/comidas/calabresa.jpg",
 
         },
 
@@ -143,7 +143,7 @@ export default {
           precio: "1800$",
           valor: 1800,
           cantidad: 1,
-          url: "",
+          url: "/comidas/camorra.jpg",
 
         },
 
@@ -153,7 +153,7 @@ export default {
           precio: "730$",
           valor: 730,
           cantidad: 1,
-          url: "",
+          url: "/comidas/sicilia.jpg",
 
         },
 
@@ -163,7 +163,7 @@ export default {
           precio: "730$",
           valor: 730,
           cantidad: 1,
-          url: "",
+          url: "/comidas/napoles.jpg",
 
         },
 
@@ -173,7 +173,7 @@ export default {
           precio: "730$",
           valor: 730,
           cantidad: 1,
-          url: "",
+          url: "/comidas/palermo.jpg",
 
         },
 
@@ -183,7 +183,7 @@ export default {
           precio: "730$", 
           valor: 730,
           cantidad: 1,
-          url: "",
+          url: "/comidas/veggie.jpg",
 
         },
       ]

@@ -72,7 +72,7 @@ export default {
                     precio: "150$",
                     cantidad: 1,
                     valor: 150,
-                    url: "./bebidas/agua.jpg",
+                    url: "/bebidas/agua.jpg",
                     
 
                 },
@@ -82,7 +82,7 @@ export default {
                     precio: "150$",
                     cantidad: 1,
                     valor: 150,
-                    url: "./bebidas/aguaGas.jpg",
+                    url: "/bebidas/aguaGas.jpg",
                 },
 
                  {
@@ -90,7 +90,7 @@ export default {
                     precio: "180$",
                     cantidad: 1,
                     valor: 180,
-                    url: "./bebidas/pepsi.jpg",
+                    url: "/bebidas/pepsi.jpg",
                 },
 
                  {
@@ -98,7 +98,7 @@ export default {
                     precio: "150$",
                     cantidad: 1,
                     valor: 150,
-                    url: "./bebidas/pepsiLata.jpg",
+                    url: "/bebidas/pepsiLata.jpg",
                 },
 
                  {
@@ -106,7 +106,7 @@ export default {
                     precio: "160$",
                     cantidad: 1,
                     valor: 160,
-                    url: "./bebidas/saborizada.jpg",
+                    url: "/bebidas/saborizada.jpg",
 
                 },
 
@@ -115,7 +115,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "./bebidas/exprimido.jpg",
+                    url: "/bebidas/exprimido.jpg",
 
                 },
 
@@ -124,7 +124,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "./bebidas/naranja.jpg",
+                    url: "/bebidas/naranja.jpg",
 
                 },
 
@@ -133,7 +133,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "./bebidas/anana.jpg",
+                    url: "/bebidas/anana.jpg",
 
                 },
 
@@ -142,7 +142,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "./bebidas/maracuya.jpg",
+                    url: "/bebidas/maracuya.jpg",
 
                 },
 
@@ -151,7 +151,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "./bebidas/naranja.jpg",
+                    url: "/bebidas/naranja.jpg",
 
                 },
 
@@ -160,7 +160,7 @@ export default {
                     precio: "450$",
                     cantidad: 1,
                     valor: 450,
-                    url: "./bebidas/frutilla.jpg",
+                    url: "/bebidas/frutilla.jpg",
 
                 },
             ]

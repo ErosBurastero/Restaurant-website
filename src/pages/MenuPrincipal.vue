@@ -11,10 +11,11 @@
       <v-carousel-item v-for="(item, i) in items" :key="i">
         <v-img
           :src="item.src"
-          min-height="500"
-          min-width="350"
-          max-height="700"
-          max-width="1000"  
+        
+          max-height="500"
+          max-width="1000"
+          width="1000"
+          height="500"
           contain
         ></v-img>
       </v-carousel-item>
@@ -59,10 +60,10 @@ export default {
           src: "./slider/fotoPrincipal.jpeg",
         },
         {
-          src: "./slider/fotoPrincipal.jpeg",
+          src: "./slider/barra.jpg",
         },
         {
-          src: "./slider/fotoPrincipal.jpeg",
+          src: "./slider/sillon.jpg",
         },
         {
           src: "./slider/fotoPrincipal.jpeg",

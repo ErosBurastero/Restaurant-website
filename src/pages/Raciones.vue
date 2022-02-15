@@ -15,7 +15,10 @@
       :key="index"
       >
 
-    <div>
+      <v-img :src="racion.url" max-height="300" max-width="300" contain></v-img>
+
+
+    <div class="pa-4">
      <div class="font-weight-black display-1" > {{ racion.nombre }} </div>
      <div> {{ racion.ingredientes }} </div>
 
@@ -71,7 +74,7 @@ export default {
                     precio: "550$",
                     valor: 550,
                     cantidad: 1,
-                    url: "",
+                    url: "/comidas/americanPapas.jpg",
                 },
 
                 {
@@ -80,7 +83,7 @@ export default {
                     precio: "650$",
                     valor: 650,
                     cantidad: 1,
-                    url: "",
+                    url: "/comidas/4mafias.jpg",
                 },
 
                 {
@@ -106,16 +109,25 @@ export default {
                     precio: "500$",
                     valor: 500,
                     cantidad: 1,
-                    url: "",
+                    url: "/comidas/batatas.jpg",
                 },
 
                 {
-                    nombre: "NACHOS",
-                    ingredientes: "NACHOS ADEREZADOS CON SALSA CHEDDAR DE LA CASA O GUACAMOLE CASERO",
+                    nombre: "NACHOS CON CHEDDAR",
+                    ingredientes: "NACHOS ADEREZADOS CON SALSA CHEDDAR DE LA CASA",
                     precio: "530$",
                     valor: 530,
                     cantidad: 1,
-                    url: "",
+                    url: "/comidas/nachos.jpg",
+                },
+
+                 {
+                    nombre: "NACHOS CON GUACAMOLE",
+                    ingredientes: "NACHOS ADEREZADOS CON GUACAMOLE CASERO",
+                    precio: "530$",
+                    valor: 530,
+                    cantidad: 1,
+                    url: "/comidas/nachosGuacamole.jpg",
                 },
 
                 {
@@ -124,7 +136,7 @@ export default {
                     precio: "500$",
                     valor: 500,
                     cantidad: 1,
-                    url: "",
+                    url: "/comidas/aros.jpg",
                 },
 
                 {
@@ -133,7 +145,7 @@ export default {
                     precio: "650$",
                     valor: 650,
                     cantidad: 1,
-                    url: "",
+                    url: "/comidas/polloCrispy.jpg",
                 },
 
                 {
@@ -142,7 +154,7 @@ export default {
                     precio: "600$",
                     valor: 600,
                     cantidad: 1,
-                    url: "",
+                    url: "/comidas/muzza.jpg",
                 },
             ]
         }
