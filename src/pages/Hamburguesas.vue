@@ -1,61 +1,74 @@
 <template>
-  <div class="d-flex flex-column align-center px-5" >
-     <div class="text-center my-5">
-          <v-btn  to="/Hamburguesas" class="ml-2"  rounded  color="orange darken-2 black--text"  dark >HAMBURGUESAS</v-btn>
-          <v-btn  to="/Extras" class="ml-2 my-2"  rounded  color="orange darken-2 black--text"  dark >EXTRAS</v-btn>
-        
+  <div class="d-flex flex-column align-center px-5">
+    <div class="text-center my-5">
+      <v-btn
+        to="/Hamburguesas"
+        class="ml-2"
+        rounded
+        color="orange darken-2 black--text"
+        dark
+        >HAMBURGUESAS</v-btn
+      >
+      <v-btn
+        to="/Dips"
+        class="ml-2 my-2"
+        rounded
+        color="orange darken-2 black--text"
+        dark
+        >DIPS</v-btn
+      >
+    </div>
+    
+    <div class="px-5">
+      <v-card
+        max-width="850"
+        class="orange darken-2 my-4 pa-4 rounded-br-xl"
+        :class="{ 'd-flex': $vuetify.breakpoint.smAndUp }"
+        elevation="4"
+        v-for="(item, index) in hamburguesas"
+        :key="index"
+      >
+        <v-img :src="item.url" max-height="400" max-width="350" contain></v-img>
 
+        <div class="pl-4">
+          <div class="font-weight-black display-1">{{ item.nombre }}</div>
+          <div class="font-weight-medium">{{ item.caracteristicas }}</div>
 
-       </div>
-    <v-card
-      
-      max-width="850"
-      class="orange darken-2 my-4 pa-4 rounded-br-xl" 
-      :class="{'d-flex': $vuetify.breakpoint.smAndUp}"
-      elevation="4"
-      v-for="(item, index) in hamburguesas"
-      :key="index"
-    >
+          <div v-for="(ingrediente, index) in item.ingredientes" :key="index">
+            {{ ingrediente }}
+          </div>
 
-    <v-img  :src="item.url" max-height="400" max-width="350" contain></v-img>
+          <div>{{ item.precio }}</div>
 
-      <div class="pl-4 ">
-        <div class="font-weight-black display-1">{{ item.nombre }}</div>
-        <div class="font-weight-medium">{{ item.caracteristicas }}</div>
+          <div class="font-weight-medium">{{ item.cantidad }}</div>
+          <v-btn
+            class="rounded-circle"
+            color="black"
+            dark
+            @click="incrementQuantity(item)"
+            >+</v-btn
+          >
+          <v-btn
+            class="rounded-circle"
+            color="black"
+            dark
+            @click="decreaseQuantity(item)"
+            >-</v-btn
+          >
 
-        <div  v-for="(ingrediente, index) in item.ingredientes" :key="index">
-          {{ ingrediente }}
+          <v-btn
+            class="ml-1 my-2"
+            rounded
+            color="black"
+            dark
+            @click="addFoodAction(item)"
+            >Agregar al carrito
+          </v-btn>
+
+          <div>{{ "PRECIO POR UNIDAD: $" + item.valor }}</div>
         </div>
-
-        <div>{{ item.precio }}</div>
-
-        <div class="font-weight-medium">{{ item.cantidad }}</div>
-        <v-btn
-          class="rounded-circle"
-          color="black"
-          dark
-          @click="incrementQuantity(item)"
-          >+</v-btn
-        >
-        <v-btn
-          class="rounded-circle"
-          color="black"
-          dark
-          @click="decreaseQuantity(item)"
-          >-</v-btn
-        >
-
-        <v-btn class="ml-1 my-2" rounded color="black" dark @click="addFoodAction(item)">Agregar al carrito
-          </v-btn
-        >
-        
-      <div> {{ "PRECIO POR UNIDAD: $" + item.valor }} </div>
-        
-      </div>
-
-      
-      
-    </v-card>
+      </v-card>
+    </div>
   </div>
 </template>
 
@@ -75,7 +88,6 @@ export default {
           valor: 720,
           cantidad: 1,
           url: "/burgers/cheese.jpg",
-          
         },
         {
           nombre: "1/4 GANGS",
@@ -88,7 +100,6 @@ export default {
           valor: 660,
           cantidad: 1,
           url: "/burgers/unCuarto.jpg",
-          
         },
 
         {
@@ -101,9 +112,7 @@ export default {
           valor: 750,
           cantidad: 1,
           url: "/burgers/american.jpg",
-          
         },
-
 
         {
           nombre: "GIUSSEPE GARIBALDI",
@@ -222,33 +231,27 @@ export default {
   },
 
   methods: {
-
-
     incrementQuantity(hamburguesa) {
-      const precio = parseInt(hamburguesa.precio.slice(0, -1))
-      
-      hamburguesa.precio = precio + hamburguesa.valor + "$";
-      
-      hamburguesa.cantidad++;
+      const precio = parseInt(hamburguesa.precio.slice(0, -1));
 
+      hamburguesa.precio = precio + hamburguesa.valor + "$";
+
+      hamburguesa.cantidad++;
     },
 
     decreaseQuantity(hamburguesa) {
-     
       if (hamburguesa.cantidad === 1) {
-        return
+        return;
       }
-      
-       const precio = parseInt(hamburguesa.precio.slice(0, -1))
+
+      const precio = parseInt(hamburguesa.precio.slice(0, -1));
       hamburguesa.precio = precio - hamburguesa.valor + "$";
 
-
       hamburguesa.cantidad--;
-
     },
 
-      addFoodAction(nuevaComida){
-      this.$store.dispatch('addFoodAction', nuevaComida)
+    addFoodAction(nuevaComida) {
+      this.$store.dispatch("addFoodAction", nuevaComida);
     },
   },
 };

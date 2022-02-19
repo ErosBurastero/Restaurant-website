@@ -10,32 +10,66 @@
         >HAMBURGUESAS</v-btn
       >
       <v-btn
-        to="/Extras"
+        to="/Dips"
         class="ml-2 my-2"
         rounded
         color="orange darken-2 black--text"
         dark
-        >EXTRAS</v-btn
+        >DIPS</v-btn
       >
     </div>
 
-    <v-card
+  <div class="px-5">
+      <v-card
       max-width="850"
       class="orange darken-2 my-4 pa-4 rounded-br-xl"
-      :class="{ 'd-flex': $vuetify.breakpoint.smAndUp }"
+      :class="{'d-flex': $vuetify.breakpoint.smAndUp }"
       elevation="4"
-      v-if="(extra, i) in extras"
-      :key="i"
+      v-for="(dip, index) in dips"
+      :key="index"
     >
 
-    <div>
-      <div >{{ extra.url }}</div>
+      <v-img :src="dip.url" max-height="250" max-width="350" contain></v-img>
 
-      <div class="font-weight-medium">{{ extra.nombre }}</div>
-      <div class="font-weight-medium">{{ extra.precio }}</div>
-      <div class="font-weight-medium">{{ extra.cantidad }}</div>
-    </div>
+
+      <div class="pl-4">
+
+          <div class="font-weight-medium display-1">{{ dip.nombre }}</div>
+          <div class="font-weight-medium">{{ dip.precio }}</div>
+          <div class="font-weight-medium">{{ dip.cantidad }}</div>
+
+   <v-btn
+            class="rounded-circle"
+            color="black"
+            dark
+            @click="incrementQuantity(dip)"
+            >+</v-btn
+          >
+          <v-btn
+            class="rounded-circle"
+            color="black"
+            dark
+            @click="decreaseQuantity(dip)"
+            >-</v-btn
+          >
+
+          <v-btn
+            class="ml-1 my-2"
+            rounded
+            color="black"
+            dark
+            @click="addFoodAction(dip)"
+            >Agregar al carrito
+          </v-btn>
+
+          <div>{{ "PRECIO POR UNIDAD: $" + dip.valor }}</div>
+      </div>
+
     </v-card>
+    
+    </div>
+   
+
   </div>
 </template>
 
@@ -43,13 +77,13 @@
 export default {
   data() {
     return {
-      extras: [
+      dips: [
         {
           nombre: "BARBACOA",
           precio: "50",
           valor: 50,
           cantidad: 1,
-          url: "",
+          url: "/extras/barbacoa.jpg",
         },
 
         {
@@ -57,7 +91,7 @@ export default {
           precio: "50",
           valor: 50,
           cantidad: 1,
-          url: "",
+          url: "/extras/tomates.jpg",
         },
 
         {
@@ -65,7 +99,7 @@ export default {
           precio: "50",
           valor: 50,
           cantidad: 1,
-          url: "",
+          url: "/extras/ciboulette.jpg",
         },
 
         {
@@ -73,7 +107,7 @@ export default {
           precio: "50",
           valor: 50,
           cantidad: 1,
-          url: "",
+          url: "/extras/teriyaki.jpg",
         },
 
         {
@@ -81,7 +115,7 @@ export default {
           precio: "50",
           valor: 50,
           cantidad: 1,
-          url: "",
+          url: "/extras/mostaza.jpg ",
         },
 
         {
@@ -105,7 +139,7 @@ export default {
           precio: "50",
           valor: 50,
           cantidad: 1,
-          url: "",
+          url: "/extras/mayopesto.jpg",
         },
 
         {
@@ -113,7 +147,7 @@ export default {
           precio: "50",
           valor: 50,
           cantidad: 1,
-          url: "",
+          url: "/extras/alioli.jpg",
         },
 
         {
@@ -121,15 +155,15 @@ export default {
           precio: "50",
           valor: 50,
           cantidad: 1,
-          url: "",
+          url: "/extras/pesto.jpg",
         },
 
         {
-          nombre: "ALIOLI",
+          nombre: "ALIOLI VEGANO",
           precio: "50",
           valor: 50,
           cantidad: 1,
-          url: "",
+          url: "/extras/alioli.jpg",
         },
       ],
     };

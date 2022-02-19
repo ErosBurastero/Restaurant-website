@@ -72,9 +72,9 @@ const routes = [
     },
 
     {
-        path: '/Extras',
+        path: '/Dips',
         component: () =>
-            import ('./pages/Extras.vue')
+            import ('./pages/Dips.vue')
     },
 
 ]
