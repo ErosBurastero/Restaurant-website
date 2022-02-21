@@ -26,7 +26,7 @@
         :class="{ 'd-flex': $vuetify.breakpoint.smAndUp }"
         elevation="4"
         v-for="(item, index) in hamburguesas"
-        :key="index"
+        :key="index"  
       >
         <v-img :src="item.url" max-height="400" max-width="350" contain></v-img>
 
@@ -38,10 +38,8 @@
             {{ ingrediente }}
           </div>
 
-          <div>{{ item.precio }}</div>
-
-          <div class="font-weight-medium">{{ item.cantidad }}</div>
-          <v-btn
+          <div>{{ item.precio }} {{ item.cantidad }} 
+             <v-btn
             class="rounded-circle"
             color="black"
             dark
@@ -55,6 +53,66 @@
             @click="decreaseQuantity(item)"
             >-</v-btn
           >
+          </div>
+
+        
+           
+         
+          
+          
+          <div class="font-weight-medium my-3">  {{ item.medallon + item.valorMedallon }} {{ item.cantidadMedallon}}
+            <v-btn
+            class="rounded-circle ml-2"
+            color="black"
+            dark
+            @click="addExtraMedallon(item)"
+            >+</v-btn
+          >
+          <v-btn
+            class="rounded-circle ml-1"
+            color="black" 
+            dark
+            @click="takeOffMedallon(item)"
+            >-</v-btn
+          > </div>
+          
+          <div class="font-weight-medium my-3">  {{ item.cheddar + item.valorCheddar }} {{ item.cantidadCheddar }}
+              <v-btn
+            class="rounded-circle ml-2"
+            color="black"
+            dark
+            @click="addExtraCheddar(item)"
+            >+</v-btn
+          >
+          <v-btn
+            class="rounded-circle ml-1"
+            color="black"
+            dark
+            @click="takeOffCheddar(item)"
+            >-</v-btn
+          > 
+           </div>
+          <div class="font-weight-medium my-3">  {{ item.panceta + item.cantidadPanceta }} 
+              <v-btn
+            class="rounded-circle ml-2"
+            color="black"
+            dark
+            @click="addExtraPanceta(item)"
+            >+</v-btn
+          >
+          <v-btn
+            class="rounded-circle ml-1"
+            color="black"
+            dark
+            @click="takeOffPanceta(item)"
+            >-</v-btn
+          > 
+          </div>
+
+
+          
+
+          
 
           <v-btn
             class="ml-1 my-2"
@@ -79,7 +137,7 @@ export default {
       hamburguesas: [
         {
           nombre: "CHEESEBURGER GANGS",
-          caracteristicas: "SIN TACC",
+          caracteristicas: "OPCION SIN TACC",
           ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR), QUESO CHEDDAR",
             "CEBOLLA BRUNOISE, PEPINOS AGRIDULCES Y SALSA ROYAL",
@@ -87,11 +145,24 @@ export default {
           precio: "720$",
           valor: 720,
           cantidad: 1,
+          medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
+          
           url: "/burgers/cheese.jpg",
         },
         {
           nombre: "1/4 GANGS",
-          caracteristicas: "SIN TACC",
+          caracteristicas: "OPCION SIN TACC",
           ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR)",
             "DOBLE QUESO CHEDDAR y ADEREZADA CON SALSA ROYAL",
@@ -248,6 +319,69 @@ export default {
       hamburguesa.precio = precio - hamburguesa.valor + "$";
 
       hamburguesa.cantidad--;
+    },
+
+    addExtraMedallon(item) {
+      if( item.cantidadMedallon >= 2) {
+        return
+      }
+      const price = parseInt(item.valorMedallon.slice(0, -1));
+      item.valorMedallon = price + item.valorMedallonNumero + "$";
+      item.cantidadMedallon++;
+    },
+
+    takeOffMedallon(item) {
+      if ( item.cantidadMedallon === 0) {
+        return
+      }
+
+      const price = parseInt(item.valorMedallon.slice(0, -1));
+      item.valorMedallon = price - item.valorMedallonNumero + "$";
+
+      item.cantidadMedallon--;
+
+    },
+
+     addExtraCheddar(item) {
+      if( item.cantidadCheddar >= 2) {
+        return
+      }
+      const price = parseInt(item.valorCheddar.slice(0, -1));
+      item.valorCheddar = price + item.valorCheddarNumero + "$";
+      item.cantidadCheddar++;
+    },
+
+    takeOffCheddar(item) {
+      if ( item.cantidadCheddar === 0) {
+        return
+      }
+
+      const price = parseInt(item.valorCheddar.slice(0, -1));
+      item.valorCheddar = price - item.valorCheddarNumero + "$";
+
+      item.cantidadCheddar--;
+
+    },
+
+    addExtraPanceta(item) {
+      if( item.cantidadPanceta >= 2) {
+        return
+      }
+      const price = parseInt(item.valorPanceta.slice(0, -1));
+      item.precio =  price + item.precio + item.valorPancetaNumero + "$";
+      item.cantidadPanceta++;
+    },
+
+    takeOffPanceta(item) {
+      if ( item.cantidadPanceta === 0) {
+        return
+      }
+
+      const price = parseInt(item.valorPanceta.slice(0, -1));
+      item.valor = price - item.valorPancetaNumero + "$";
+
+      item.cantidadPanceta--;
+
     },
 
     addFoodAction(nuevaComida) {

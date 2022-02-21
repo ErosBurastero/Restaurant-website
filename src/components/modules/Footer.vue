@@ -52,5 +52,6 @@
 <style scoped>
 a:visited {
     color: black;
+
 }
 </style>
