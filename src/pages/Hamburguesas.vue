@@ -30,7 +30,7 @@
       >
         <v-img :src="item.url" max-height="400" max-width="350" contain></v-img>
 
-        <div class="pl-4">
+        <div class="pl-3">
           <div class="font-weight-black display-1">{{ item.nombre }}</div>
           <div class="font-weight-medium">{{ item.caracteristicas }}</div>
 
@@ -56,11 +56,7 @@
           </div>
 
         
-           
-         
-          
-          
-          <div class="font-weight-medium my-3">  {{ item.medallon + item.valorMedallon }} {{ item.cantidadMedallon}}
+          <div class="subtitle-2 my-1">  {{ item.medallon + item.valorMedallon }} {{ item.cantidadMedallon}}
             <v-btn
             class="rounded-circle ml-2"
             color="black"
@@ -76,7 +72,7 @@
             >-</v-btn
           > </div>
           
-          <div class="font-weight-medium my-3">  {{ item.cheddar + item.valorCheddar }} {{ item.cantidadCheddar }}
+          <div class="subtitle-2 my-1">  {{ item.cheddar + item.valorCheddar }} {{ item.cantidadCheddar }}
               <v-btn
             class="rounded-circle ml-2"
             color="black"
@@ -92,7 +88,7 @@
             >-</v-btn
           > 
            </div>
-          <div class="font-weight-medium my-3">  {{ item.panceta + item.cantidadPanceta }} 
+          <div class="subtitle-2 my-1">  {{ item.panceta + item.valorPanceta}} {{ item.cantidadPanceta }}
               <v-btn
             class="rounded-circle ml-2"
             color="black"
@@ -108,10 +104,6 @@
             >-</v-btn
           > 
           </div>
-
-
-          
-
           
 
           <v-btn
@@ -123,7 +115,7 @@
             >Agregar al carrito
           </v-btn>
 
-          <div>{{ "PRECIO POR UNIDAD: $" + item.valor }}</div>
+         
         </div>
       </v-card>
     </div>
@@ -157,7 +149,6 @@ export default {
           valorPanceta: "0$",
           valorPancetaNumero: 50,
           cantidadPanceta: 0,
-          
           url: "/burgers/cheese.jpg",
         },
         {
@@ -170,6 +161,18 @@ export default {
           precio: "660$",
           valor: 660,
           cantidad: 1,
+           medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
           url: "/burgers/unCuarto.jpg",
         },
 
@@ -182,6 +185,18 @@ export default {
           precio: "750$",
           valor: 750,
           cantidad: 1,
+           medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
           url: "/burgers/american.jpg",
         },
 
@@ -195,6 +210,18 @@ export default {
           precio: "850$",
           valor: 850,
           cantidad: 1,
+           medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
           url: "/burgers/garibaldi.jpg",
         },
         {
@@ -207,6 +234,18 @@ export default {
           precio: "760$",
           valor: 760,
           cantidad: 1,
+           medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
           url: "/burgers/luckyLuciano.jpg",
         },
         {
@@ -219,6 +258,18 @@ export default {
           precio: "930$",
           valor: 930,
           cantidad: 1,
+           medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
           url: "/burgers/mexicana.jpg",
         },
         {
@@ -231,6 +282,18 @@ export default {
           precio: "720$",
           valor: 720,
           cantidad: 1,
+           medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
           url: "/burgers/bigBangs.jpg",
         },
         {
@@ -242,6 +305,18 @@ export default {
           precio: "790$",
           valor: 790,
           cantidad: 1,
+           medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
           url: "/burgers/caesar.jpg",
         },
         {
@@ -254,6 +329,18 @@ export default {
           precio: "770$",
           valor: 770,
           cantidad: 1,
+           medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
           url: "/burgers/john.jpg",
         },
 
@@ -265,6 +352,18 @@ export default {
           precio: "550$",
           valor: 550,
           cantidad: 1,
+           medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
         },
         {
           nombre: "MINI GANGS POLLO CRISPY",
@@ -272,6 +371,18 @@ export default {
           Precio: "550$",
           valor: 550,
           cantidad: 1,
+           medallon: "MEDALLON DE CARNE ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 100,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
         },
         {
           nombre: "BARKER",
@@ -284,6 +395,19 @@ export default {
           valor: 720,
           cantidad: 1,
           url: "/burgers/barker.jpg",
+           medallon: "MEDALLON VEGANO ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 150,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
+      
         },
         {
           nombre: "NOT BURGER",
@@ -296,6 +420,18 @@ export default {
           precio: "860$",
           valor: 860,
           cantidad: 1,
+          medallon: "MEDALLON VEGANO ",
+          valorMedallon: "0$",
+          valorMedallonNumero: 150,
+          cantidadMedallon: 0,
+          cheddar: "CHEDDAR ",
+          valorCheddar: "0$",
+          valorCheddarNumero: 50,
+          cantidadCheddar: 0,
+          panceta: "PANCETA ",
+          valorPanceta: "0$",
+          valorPancetaNumero: 50,
+          cantidadPanceta: 0,
         },
       ],
     };
@@ -368,7 +504,7 @@ export default {
         return
       }
       const price = parseInt(item.valorPanceta.slice(0, -1));
-      item.precio =  price + item.precio + item.valorPancetaNumero + "$";
+      item.valorPanceta =  price + item.valorPancetaNumero + "$";
       item.cantidadPanceta++;
     },
 
@@ -378,7 +514,7 @@ export default {
       }
 
       const price = parseInt(item.valorPanceta.slice(0, -1));
-      item.valor = price - item.valorPancetaNumero + "$";
+      item.valorPanceta = price - item.valorPancetaNumero + "$";
 
       item.cantidadPanceta--;
 

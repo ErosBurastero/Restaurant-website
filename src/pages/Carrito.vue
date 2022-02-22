@@ -24,9 +24,11 @@
             >
           </div>
 
-          <div>{{ "CANTIDAD " + comida.cantidad }}</div>
-
-          <div>{{ "PRECIO:" + comida.precio }}</div>
+          <div>{{ "CANTIDAD:  " + comida.cantidad + " —  PRECIO: " + comida.precio + ""  }}</div>
+          <div>{{ }}</div>
+          <div> {{ "EXTRAS: "  + comida.medallon + comida.valorMedallon}} </div>
+          <div> {{ "EXTRAS: "  + comida.cheddar + comida.valorCheddar}} </div>
+          <div> {{ "EXTRAS: "  + comida.panceta + comida.valorPanceta}} </div>
         </li>
       </ul>
 
@@ -68,14 +70,17 @@ export default {
       const pedidos = this.$store.state.comidas;
       if(pedidos.length === 0) return "0"
 
+      
 
       if(pedidos.length > 1){
         const sumaPedidos = pedidos.reduce((pedidoAnterior, pedido) => {
-          const pedidoActualTotal = pedido.valor * pedido.cantidad
+          const pedidoActualTotal = pedido.valor  * pedido.cantidad + pedido.valorMedallonNumero * pedido.cantidadMedallon + pedido.valorCheddarNumero * pedido.cantidadCheddar + pedido.valorPancetaNumero * pedido.cantidadPanceta
+
+          
 
 
           if (pedidoAnterior.valor) {
-            const pedidoAnteriorTotal = pedidoAnterior.valor * pedidoAnterior.cantidad
+            const pedidoAnteriorTotal = pedidoAnterior.valorMedallonNumero * pedidoAnterior.cantidadMedallon + pedidoAnterior.valorCheddarNumero * pedidoAnterior.cantidadCheddar + pedidoAnterior.valorPancetaNumero * pedidoAnterior.cantidadPanceta  + pedidoAnterior.valor  * pedidoAnterior.cantidad
             return pedidoActualTotal + pedidoAnteriorTotal;
           }
           return pedidoActualTotal + pedidoAnterior;
@@ -84,8 +89,11 @@ export default {
         return sumaPedidos
       }
       const unicoPedido = pedidos[0]
-      const unicoPedidoTotal = unicoPedido.valor * unicoPedido.cantidad
-      return unicoPedidoTotal
+      const unicoPedidoTotal = unicoPedido.valorPancetaNumero * unicoPedido.cantidadPanceta + unicoPedido.valorCheddarNumero * unicoPedido.cantidadCheddar + unicoPedido.valorMedallonNumero * unicoPedido.cantidadMedallon +  unicoPedido.valor * unicoPedido.cantidad;
+     
+    
+       
+      return unicoPedidoTotal 
     }
   },
   methods: {
@@ -104,9 +112,9 @@ export default {
 
       const pedidos = this.$store.state.comidas
 
-      const pedidosFiltrados =  pedidos.map(({nombre, precio, cantidad}) => {
+      const pedidosFiltrados =  pedidos.map(({nombre, cantidad, medallon, cantidadMedallon, cheddar, cantidadCheddar, panceta, cantidadPanceta}) => {
       
-        return {nombre, precio, cantidad}
+        return {nombre, cantidad, medallon, cantidadMedallon, cheddar, cantidadCheddar, panceta, cantidadPanceta}
       
       })
       

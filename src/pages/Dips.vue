@@ -80,7 +80,7 @@ export default {
       dips: [
         {
           nombre: "BARBACOA",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "/extras/barbacoa.jpg",
@@ -88,7 +88,7 @@ export default {
 
         {
           nombre: "SALSA DE TOMATES CASERA",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "/extras/tomates.jpg",
@@ -96,7 +96,7 @@ export default {
 
         {
           nombre: "QUESO CREMA DE CIBULETTE",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "/extras/ciboulette.jpg",
@@ -104,7 +104,7 @@ export default {
 
         {
           nombre: "SALSA TERIYAKI",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "/extras/teriyaki.jpg",
@@ -112,7 +112,7 @@ export default {
 
         {
           nombre: "MOSTAZA HONEY",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "/extras/mostaza.jpg ",
@@ -120,7 +120,7 @@ export default {
 
         {
           nombre: "SALSA GANGS",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "",
@@ -128,7 +128,7 @@ export default {
 
         {
           nombre: "SALSA ROYAL",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "",
@@ -136,7 +136,7 @@ export default {
 
         {
           nombre: "MAYOPESTO",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "/extras/mayopesto.jpg",
@@ -144,7 +144,7 @@ export default {
 
         {
           nombre: "ALIOLI",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "/extras/alioli.jpg",
@@ -152,7 +152,7 @@ export default {
 
         {
           nombre: "PESTO DE LA CASA",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "/extras/pesto.jpg",
@@ -160,7 +160,7 @@ export default {
 
         {
           nombre: "ALIOLI VEGANO",
-          precio: "50",
+          precio: "50$",
           valor: 50,
           cantidad: 1,
           url: "/extras/alioli.jpg",
@@ -168,6 +168,31 @@ export default {
       ],
     };
   },
+
+  methods: {
+    incrementQuantity(dip) {
+      const precio = parseInt(dip.precio.slice(0, -1))
+
+      dip.precio = precio + dip.valor + "$";
+
+      dip.cantidad++
+    },
+
+    decreaseQuantity(dip) {
+      if( dip.cantidad === 1) {
+        return;
+      }
+
+      const precio = parseInt(dip.precio.slice(0, -1))
+      dip.precio = precio - dip.valor + "$";
+
+      dip.cantidad--;
+    },
+
+    addFoodAction(nuevaComida) {
+      this.$store.dispatch('addFoodAction', nuevaComida)
+    }
+  }
 };
 </script>
 
