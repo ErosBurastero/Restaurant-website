@@ -129,7 +129,7 @@ export default {
       hamburguesas: [
         {
           nombre: "CHEESEBURGER GANGS",
-          caracteristicas: "OPCION SIN TACC",
+          caracteristicas: "OPCION SIN TACC (ACLARAR)",
           ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR), QUESO CHEDDAR",
             "CEBOLLA BRUNOISE, PEPINOS AGRIDULCES Y SALSA ROYAL",
@@ -153,7 +153,7 @@ export default {
         },
         {
           nombre: "1/4 GANGS",
-          caracteristicas: "OPCION SIN TACC",
+          caracteristicas: "OPCION SIN TACC (ACLARAR)",
           ingredientes: [
             "DOBLE MEDALLON DE CARNE (90GR)",
             "DOBLE QUESO CHEDDAR y ADEREZADA CON SALSA ROYAL",

@@ -9,6 +9,9 @@
 
   </div>
 
+      <v-card class="black white--text pa-8 font-weight-bold" elevation="10">ATENCION: LOS LICUADOS SOLO PARA CONSUMICION EN EL RESTAURANT. <br> LAS IMÁGENES PUBLICADAS SON MERAMENTE ILUSTRATIVAS</v-card>
+
+
     <div class="px-5">
       <v-card  max-width="700"
       class="orange darken-2 my-4 pa-4 rounded-br-xl" 

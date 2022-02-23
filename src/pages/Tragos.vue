@@ -9,6 +9,9 @@
 
 
          </div>
+
+         <v-card class="black white--text pa-8 font-weight-bold" elevation="10">ATENCION: SOLO PARA CONSUMICION EN EL RESTAURANT. <br> LAS IMÁGENES PUBLICADAS SON MERAMENTE ILUSTRATIVAS</v-card>
+
   
   <div class="px-5 ">
     

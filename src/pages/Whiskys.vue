@@ -1,5 +1,6 @@
 <template>
   <div class="d-flex flex-column align-center px-5">
+    
     <div class="text-center my-5">
       <v-btn
         to="/Bebidas"
@@ -35,7 +36,10 @@
       >
     </div>
 
+
+    <v-card class="black white--text pa-8 font-weight-bold" elevation="10">ATENCION: SOLO PARA CONSUMICION EN EL RESTAURANT. <br> LAS IMÁGENES PUBLICADAS SON MERAMENTE ILUSTRATIVAS</v-card>
     <div class="px-5">
+      
       <v-card
         max-width="850"
         class="orange darken-2 my-4 pa-4 rounded-br-xl"
@@ -44,6 +48,8 @@
         v-for="(whisky, index) in whiskys"
         :key="index"
       >
+
+        
 
          <v-img class="mr-5" :src="whisky.url" max-height="200" max-width="200" contain></v-img>
 
@@ -74,10 +80,19 @@
         
 
           <div>{{ "PRECIO POR UNIDAD: " + whisky.valor + "$" }}</div>
+
+        
         </div>
       </v-card>
+
+
+
+      
     </div>
+   
   </div>
+
+ 
 </template>
 
 <script>

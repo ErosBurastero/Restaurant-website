@@ -7,6 +7,9 @@
           <v-btn  to="/Whiskys" class="ml-2 my-2"  rounded  color="orange darken-2 black--text"  dark >WHISKYS Y ESPUMANTES</v-btn>
        </div>
 
+        <v-card class="black white--text pa-8 font-weight-bold" elevation="10">AVISO: NO SE HACE DELIVERY DE STELLA ARTOIS.  <br> LAS IMÁGENES PUBLICADAS SON MERAMENTE ILUSTRATIVAS</v-card>
+
+
     <div class="px-5 ">
       <v-card max-width="850" class="card orange darken-2 my-4 pa-4  rounded-br-xl "
        :class="{'d-flex': $vuetify.breakpoint.smAndUp}"

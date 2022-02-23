@@ -23,7 +23,7 @@
 
       <v-card-text class="white--text pt-0">
             <div class="subtitle-1"> Somos THE GANGSTER HAMBURG, una hamburguesería artesanal ubicada en el corazón de La Tablada. Implementamos nuestra pasión por la cocina en cada uno de nuestros platos. Les ofrecemos disfrutar de la mejor variedad gastronomica de la zona. Vení a comer y a probar un trago con nosotros!! <br> y NO olvides seguirnos en nuestras redes sociales!  </div> 
-            <div class="d-flex justify-center">  <br><br> HORARIOS DE ATENCION / HORARIOS DE COCINA:<br> MARTES A DOMINGO: 18:00PM hasta las 03:00 AM / Cocina hasta las 00:30 <br>LUNES: Cerrado </div>
+            <div class="d-flex justify-center">  <br><br> HORARIOS DE ATENCION / HORARIOS DE COCINA:<br>MARTES A JUEVES: 18:00PM hasta las 02:00HS / Cocina hasta las 00:30 <br> VIERNES A DOMINGO: 18:00PM hasta las 03:00 AM / Cocina hasta las 00:30 <br>LUNES: Cerrado </div>
               
 
           
