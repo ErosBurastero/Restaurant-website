@@ -24,13 +24,22 @@
             >
           </div>
 
-          <div>{{ "CANTIDAD:  " + comida.cantidad + " —  PRECIO: " + comida.precio + ""  }}</div>
-          <div>{{ }}</div>
-          <div> {{ "EXTRAS: "  + comida.medallon + comida.valorMedallon}} </div>
-          <div> {{ "EXTRAS: "  + comida.cheddar + comida.valorCheddar}} </div>
-          <div> {{ "EXTRAS: "  + comida.panceta + comida.valorPanceta}} </div>
+          <div>
+            {{
+              "CANTIDAD:  " +
+              comida.cantidad +
+              " —  PRECIO: " +
+              comida.precio +
+              ""
+            }}
+          </div>
+          <div v-for="(extra, index) in getExtras(comida)" :key="index">
+            {{ extra.name + extra.value }}
+          </div>
         </li>
       </ul>
+
+      <v-divider></v-divider>
 
       <div class="my-2 ml-3 font-weight-bold">
         {{ total + sumarComida + "$" }}
@@ -68,63 +77,138 @@ export default {
   computed: {
     sumarComida() {
       const pedidos = this.$store.state.comidas;
-      if(pedidos.length === 0) return "0"
+      if (pedidos.length === 0) return "0";
 
-      
-
-      if(pedidos.length > 1){
+      if (pedidos.length > 1) {
         const sumaPedidos = pedidos.reduce((pedidoAnterior, pedido) => {
-          const pedidoActualTotal = pedido.valor  * pedido.cantidad + pedido.valorMedallonNumero * pedido.cantidadMedallon + pedido.valorCheddarNumero * pedido.cantidadCheddar + pedido.valorPancetaNumero * pedido.cantidadPanceta
-
-          
-
+          const extras = [
+            {
+              name: "panceta",
+              valor:
+                pedido.valorPancetaNumero * pedido.cantidadPanceta,
+            },
+            {
+              name: "cheddar",
+              valor:
+                pedido.valorCheddarNumero * pedido.cantidadCheddar,
+            },
+            {
+              name: "medallon",
+              valor:
+                pedido.valorMedallonNumero * pedido.cantidadMedallon,
+            },
+          ];
+          let valorExtras = 0;
+          extras.forEach((extra) => {
+            if (extra.valor) {
+              valorExtras += extra.valor
+            }
+          });
+          const pedidoActualTotal =
+            pedido.valor * pedido.cantidad + valorExtras
 
           if (pedidoAnterior.valor) {
-            const pedidoAnteriorTotal = pedidoAnterior.valorMedallonNumero * pedidoAnterior.cantidadMedallon + pedidoAnterior.valorCheddarNumero * pedidoAnterior.cantidadCheddar + pedidoAnterior.valorPancetaNumero * pedidoAnterior.cantidadPanceta  + pedidoAnterior.valor  * pedidoAnterior.cantidad
+            const pedidoAnteriorTotal = pedidoAnterior.valor * pedidoAnterior.cantidad;
             return pedidoActualTotal + pedidoAnteriorTotal;
           }
           return pedidoActualTotal + pedidoAnterior;
-        }
-        );
-        return sumaPedidos
+        });
+        return sumaPedidos;
       }
-      const unicoPedido = pedidos[0]
-      const unicoPedidoTotal = unicoPedido.valorPancetaNumero * unicoPedido.cantidadPanceta + unicoPedido.valorCheddarNumero * unicoPedido.cantidadCheddar + unicoPedido.valorMedallonNumero * unicoPedido.cantidadMedallon +  unicoPedido.valor * unicoPedido.cantidad;
-     
-    
-       
-      return unicoPedidoTotal 
-    }
+      const unicoPedido = pedidos[0];
+      const extras = [
+        {
+          name: "panceta",
+          valor: unicoPedido.valorPancetaNumero * unicoPedido.cantidadPanceta,
+        },
+        {
+          name: "cheddar",
+          valor: unicoPedido.valorCheddarNumero * unicoPedido.cantidadCheddar,
+        },
+        {
+          name: "medallon",
+          valor: unicoPedido.valorMedallonNumero * unicoPedido.cantidadMedallon,
+        },
+      ];
+      let valorExtras = 0;
+      extras.forEach((extra) => {
+        if (extra.valor) {
+          valorExtras += extra.valor;
+        }
+      });
+
+      console.log(valorExtras);
+
+      const unicoPedidoTotal =
+        valorExtras + unicoPedido.valor * unicoPedido.cantidad;
+
+      return unicoPedidoTotal;
+    },
   },
   methods: {
     deletePedido(pedido) {
       this.$store.dispatch("deleteComidaAction", pedido);
     },
 
-    
-    getUrlWithCart() {
-      const URL = "https://wa.me/541132154125?text="
+    getExtras(comida) {
+      let extras = [];
+      if (comida.medallon && comida.cantidadMedallon > 0) {
+        extras.push({ name: comida.medallon, value: comida.valorMedallon });
+      }
+      if (comida.cheddar && comida.cantidadCheddar > 0) {
+        extras.push({ name: comida.cheddar, value: comida.valorCheddar });
+      }
+      if (comida.panceta && comida.cantidadPanceta > 0) {
+        extras.push({ name: comida.panceta, value: comida.valorPanceta });
+      }
+      return extras;
+    },
 
-      if(this.$store.state.comidas.length === 0) {
-        return
+    getUrlWithCart() {
+      const URL = "https://wa.me/541132154125?text=";
+
+      if (this.$store.state.comidas.length === 0) {
+        return;
       }
 
+      const pedidos = this.$store.state.comidas;
 
-      const pedidos = this.$store.state.comidas
-
-      const pedidosFiltrados =  pedidos.map(({nombre, cantidad, medallon, cantidadMedallon, cheddar, cantidadCheddar, panceta, cantidadPanceta}) => {
-      
-        return {nombre, cantidad, medallon, cantidadMedallon, cheddar, cantidadCheddar, panceta, cantidadPanceta}
-      
-      })
-      
-      return URL + JSON.stringify(pedidosFiltrados) + `precio total: ${this.sumarComida} $` 
-
-
-    }
-
-
-
+      const pedidosFiltrados = pedidos.map(
+        ({
+          nombre,
+          cantidad,
+          medallon,
+          cantidadMedallon,
+          cheddar,
+          cantidadCheddar,
+          panceta,
+          cantidadPanceta,
+        }) => {
+          const medallonVal = cantidadMedallon > 0 ? medallon : null
+          const cantidadMedallonVal = cantidadMedallon > 0 ? cantidadMedallon : null
+          
+          return {
+            nombre,
+            cantidad,
+            medallonVal,
+            cantidadMedallonVal,
+            cheddar,
+            cantidadCheddar,
+            panceta,
+            cantidadPanceta,
+          };
+        }
+      );
+      const output = "[%0a %0a" + 
+        pedidosFiltrados.map(entry => JSON.stringify(entry)).join(',%0a %0a')
+      + "%0a %0a]"
+      console.log(output)
+      return (
+        URL +
+        output + '%0a' +
+        `precio total: ${this.sumarComida} $`
+      );
+    },
   },
 };
 </script>

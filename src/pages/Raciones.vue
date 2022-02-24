@@ -92,7 +92,7 @@ export default {
                     precio: "700$",
                     valor: 700,
                     cantidad: 1,
-                    url: "",
+                    url: "/comidas/papasGangster.jpg",
                 },
 
                 {

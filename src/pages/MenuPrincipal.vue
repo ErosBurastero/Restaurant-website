@@ -5,7 +5,6 @@
       hide-delimiters
       v-if="$vuetify.breakpoint.smAndUp"
 
-      
 
     >
       <v-carousel-item v-for="(item, i) in items" :key="i">
@@ -57,7 +56,7 @@ export default {
     return {
       items: [
         {
-          src: "./slider/fotoPrincipal.jpeg",
+          src: "./slider/paraSlider.jpg",
         },
         {
           src: "./slider/barra.jpg",
