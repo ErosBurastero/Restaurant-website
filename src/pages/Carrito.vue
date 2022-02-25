@@ -84,31 +84,29 @@ export default {
           const extras = [
             {
               name: "panceta",
-              valor:
-                pedido.valorPancetaNumero * pedido.cantidadPanceta,
+              valor: pedido.valorPancetaNumero * pedido.pancetaExtra,
             },
             {
               name: "cheddar",
-              valor:
-                pedido.valorCheddarNumero * pedido.cantidadCheddar,
+              valor: pedido.valorCheddarNumero * pedido.cheddarExtra,
             },
             {
               name: "medallon",
-              valor:
-                pedido.valorMedallonNumero * pedido.cantidadMedallon,
+              valor: pedido.valorMedallonNumero * pedido.medallonExtra,
             },
           ];
           let valorExtras = 0;
           extras.forEach((extra) => {
             if (extra.valor) {
-              valorExtras += extra.valor
+              valorExtras += extra.valor;
             }
           });
           const pedidoActualTotal =
-            pedido.valor * pedido.cantidad + valorExtras
+            pedido.valor * pedido.cantidad + valorExtras;
 
           if (pedidoAnterior.valor) {
-            const pedidoAnteriorTotal = pedidoAnterior.valor * pedidoAnterior.cantidad;
+            const pedidoAnteriorTotal =
+              pedidoAnterior.valor * pedidoAnterior.cantidad;
             return pedidoActualTotal + pedidoAnteriorTotal;
           }
           return pedidoActualTotal + pedidoAnterior;
@@ -119,15 +117,15 @@ export default {
       const extras = [
         {
           name: "panceta",
-          valor: unicoPedido.valorPancetaNumero * unicoPedido.cantidadPanceta,
+          valor: unicoPedido.valorPancetaNumero * unicoPedido.pancetaExtra,
         },
         {
           name: "cheddar",
-          valor: unicoPedido.valorCheddarNumero * unicoPedido.cantidadCheddar,
+          valor: unicoPedido.valorCheddarNumero * unicoPedido.cheddarExtra,
         },
         {
           name: "medallon",
-          valor: unicoPedido.valorMedallonNumero * unicoPedido.cantidadMedallon,
+          valor: unicoPedido.valorMedallonNumero * unicoPedido.medallonExtra,
         },
       ];
       let valorExtras = 0;
@@ -152,13 +150,13 @@ export default {
 
     getExtras(comida) {
       let extras = [];
-      if (comida.medallon && comida.cantidadMedallon > 0) {
+      if (comida.medallon && comida.medallonExtra > 0) {
         extras.push({ name: comida.medallon, value: comida.valorMedallon });
       }
-      if (comida.cheddar && comida.cantidadCheddar > 0) {
+      if (comida.cheddar && comida.cheddarExtra > 0) {
         extras.push({ name: comida.cheddar, value: comida.valorCheddar });
       }
-      if (comida.panceta && comida.cantidadPanceta > 0) {
+      if (comida.panceta && comida.pancetaExtra > 0) {
         extras.push({ name: comida.panceta, value: comida.valorPanceta });
       }
       return extras;
@@ -177,36 +175,33 @@ export default {
         ({
           nombre,
           cantidad,
-          medallon,
-          cantidadMedallon,
-          cheddar,
-          cantidadCheddar,
-          panceta,
-          cantidadPanceta,
+
+            medallonExtra,
+
+            cheddarExtra,
+
+            pancetaExtra,
         }) => {
-          
-          
           return {
             nombre,
             cantidad,
-            medallon,
-            cantidadMedallon,
-            cheddar,
-            cantidadCheddar,
-            panceta,
-            cantidadPanceta,
+
+            medallonExtra,
+
+            cheddarExtra,
+
+            pancetaExtra,
           };
         }
       );
-      const output = "[%0a %0a" + 
-        pedidosFiltrados.map(entry => JSON.stringify(entry)).join(',%0a %0a')
-      + "%0a %0a]"
-      console.log(output)
-      return (
-        URL +
-        output + '%0a' +
-        `precio total: ${this.sumarComida} $`
-      );
+      const output =
+        "[%0a %0a" +
+        pedidosFiltrados
+          .map((entry) => JSON.stringify(entry))
+          .join(",%0a %0a") +
+        "%0a %0a]";
+      console.log(output);
+      return URL + output + "%0a" + `precio total: ${this.sumarComida} $`;
     },
   },
 };
