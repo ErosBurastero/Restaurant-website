@@ -184,14 +184,13 @@ export default {
           panceta,
           cantidadPanceta,
         }) => {
-          const medallonVal = cantidadMedallon > 0 ? medallon : null
-          const cantidadMedallonVal = cantidadMedallon > 0 ? cantidadMedallon : null
+          
           
           return {
             nombre,
             cantidad,
-            medallonVal,
-            cantidadMedallonVal,
+            medallon,
+            cantidadMedallon,
             cheddar,
             cantidadCheddar,
             panceta,

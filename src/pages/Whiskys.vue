@@ -77,6 +77,25 @@
         <v-btn class="ml-1 my-2" rounded color="black" dark @click="addFoodAction(whisky)" >Agregar al carrito
           </v-btn
         >
+
+               <v-snackbar
+      v-model="snackbar"
+      :timeout="timeout"
+      color="black"
+    >
+      <span class="orange--text">{{text}}</span>
+
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="orange darken-2"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Cerrar
+        </v-btn>
+      </template>
+    </v-snackbar>
         
 
           <div>{{ "PRECIO POR UNIDAD: " + whisky.valor + "$" }}</div>
@@ -187,6 +206,10 @@ export default {
           url: "./tragos/baron.jpg",
         },
       ],
+
+      snackbar: false,
+      text: "Has agregado un producto al carrito",
+      timeout: 1500,
     };
   },
 
@@ -208,6 +231,7 @@ export default {
      
     },
      addFoodAction(nuevaComida){
+       this.snackbar = true
        this.$store.dispatch('addFoodAction', nuevaComida)
      }
       

@@ -121,9 +121,9 @@
              <v-snackbar
       v-model="snackbar"
       :timeout="timeout"
-      color="white"
+      color="black"
     >
-      <span class="black--text">{{text}}</span>
+      <span class="orange--text">{{text}}</span>
 
       <template v-slot:action="{ attrs }">
         <v-btn
@@ -459,7 +459,7 @@ export default {
 
        snackbar: false,
       text: 'Has agregado un producto al carrito',
-      timeout: 2000,
+      timeout: 1500,
     };
   },
 

@@ -44,6 +44,25 @@
           </v-btn
         >
 
+            <v-snackbar
+      v-model="snackbar"
+      :timeout="timeout"
+      color="black"
+    >
+      <span class="orange--text">{{text}}</span>
+
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="orange darken-2 "
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Cerrar
+        </v-btn>
+      </template>
+    </v-snackbar>
+
         <div> {{ "PRECIO POR UNIDAD:" + racion.valor}} </div>   
       
     </div>
@@ -156,7 +175,12 @@ export default {
                     cantidad: 1,
                     url: "/comidas/muzza.jpg",
                 },
-            ]
+            ],
+
+            snackbar: false,
+            text: "Has agregado un producto al carrito",
+            timeout: 2000,
+        
         }
     },
 
@@ -179,6 +203,7 @@ export default {
         },
 
            addFoodAction(nuevaComida){
+               this.snackbar = true
       this.$store.dispatch('addFoodAction', nuevaComida)
     },
     }
